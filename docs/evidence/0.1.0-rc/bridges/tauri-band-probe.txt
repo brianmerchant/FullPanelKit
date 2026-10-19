@@ -1,0 +1,11 @@
+== tauri pid=63018
+Window B — ordinary fs=false
+Window A — FullPanelKit fs=false
+AXFullScreen=true -> 0
+A fullscreen: left[nonblack=0.99 mean=#f2ae50 uniform=0.98] right[nonblack=0.99 mean=#6ec6bf uniform=0.98] app colours #ff9f1c / #2ec4b6
+  A: Window A — FullPanelKit fs=true
+AXFullScreen=false -> 0
+AXFullScreen=true -> 0
+B fullscreen: left[nonblack=0.00 mean=#000000 uniform=1.00] right[nonblack=0.00 mean=#000000 uniform=1.00] app colours #ff9f1c / #2ec4b6
+  B: Window B — ordinary fs=true
+AXFullScreen=false -> 0

@@ -1,0 +1,19 @@
+== control (switch=system)
+  Dock click, other app on desktop   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2753 index=2 count=3 -> switched
+  Command-Tab, other app on desktop  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2753 index=2 count=3 -> switched
+  Command-Tab, other app fullscreen  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2753 index=2 count=4 -> switched
+  Dock click, other app fullscreen   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2753 index=2 count=4 -> switched
+== session (switch=system)
+  Dock click, other app on desktop   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2764 index=2 count=3 -> switched
+  Command-Tab, other app on desktop  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2764 index=2 count=3 -> switched
+  Command-Tab, other app fullscreen  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2764 index=2 count=4 -> switched
+  Dock click, other app fullscreen   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2764 index=2 count=4 -> switched
+== fpwindow (switch=system)
+  Dock click, other app on desktop   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2775 index=2 count=3 -> switched
+  Command-Tab, other app on desktop  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2775 index=2 count=3 -> switched
+  Command-Tab, other app fullscreen  before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2775 index=2 count=4 -> switched
+  Dock click, other app fullscreen   before=SpacesOther front=SpacesLab  display=builtin shown=1 space=2775 index=2 count=4 -> switched
+
+session: same as native fullscreen
+fpwindow: same as native fullscreen
+Logs: <validation>/20-final-601d06a/activation

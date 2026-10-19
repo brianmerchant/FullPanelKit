@@ -1,0 +1,11 @@
+.DS_Store
+.build/
+.swiftpm/
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+Examples/FullPanelDemo/.build/
+Examples/FullPanelDemo/build/
+*.profraw
+Tools/SpacesHarness/runs/

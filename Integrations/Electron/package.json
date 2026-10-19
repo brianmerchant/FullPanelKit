@@ -1,0 +1,21 @@
+{
+  "name": "fullpanelkit-electron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FullPanelKit for Electron BrowserWindows: native macOS fullscreen beside the camera housing (Node-API addon over FullPanelKitCore).",
+  "license": "MIT",
+  "main": "index.js",
+  "os": [
+    "darwin"
+  ],
+  "gypfile": false,
+  "scripts": {
+    "build": "node-gyp rebuild --target=44.7.0 --arch=arm64 --dist-url=https://electronjs.org/headers",
+    "bridge-check": "electron test-app/main.js --bridge-check",
+    "autotest": "electron test-app/main.js --autotest",
+    "start": "electron test-app/main.js"
+  },
+  "devDependencies": {
+    "electron": "44.7.0"
+  }
+}

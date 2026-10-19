@@ -1,0 +1,10 @@
+== appkit
+entry:   left[nonblack=1.00 mean=#71e092 uniform=0.96] right[nonblack=1.00 mean=#72d1f9 uniform=0.95]
+top edge: left[nonblack=0.03 mean=#070707 uniform=0.97] right[nonblack=0.09 mean=#101011 uniform=0.91]
+away:    left[nonblack=1.00 mean=#71e092 uniform=0.96] right[nonblack=1.00 mean=#72d1f9 uniform=0.95]
+exit: FullPanel Demo fs=false
+== swiftui
+entry:   left[nonblack=1.00 mean=#42775b uniform=0.00] right[nonblack=1.00 mean=#3e6c8f uniform=0.00]
+top edge: left[nonblack=0.03 mean=#070707 uniform=0.97] right[nonblack=0.09 mean=#111111 uniform=0.91]
+away:    left[nonblack=1.00 mean=#42775b uniform=0.00] right[nonblack=1.00 mean=#3e6d8f uniform=0.00]
+exit: FullPanel Demo (SwiftUI) fs=false

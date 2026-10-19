@@ -1,0 +1,8 @@
+== FullPanelDemo appkit: FullPanel Demo fs=false
+fullscreen: left[nonblack=1.00 mean=#71e092 uniform=0.96] right[nonblack=1.00 mean=#72d1f9 uniform=0.95]
+FullPanel Demo fs=true
+after exit: FullPanel Demo fs=false
+== FullPanelDemo swiftui: FullPanel Demo (SwiftUI) fs=false
+fullscreen: left[nonblack=1.00 mean=#42775b uniform=0.00] right[nonblack=1.00 mean=#3e6c8f uniform=0.00]
+FullPanel Demo (SwiftUI) fs=true
+after exit: FullPanel Demo (SwiftUI) fs=false

@@ -1,0 +1,20 @@
+:root { color-scheme: light dark; font: 13px -apple-system, system-ui, sans-serif; }
+html, body { margin: 0; height: 100%; }
+body { background: #20304a; color: #f2f4f8; overflow: hidden; }
+body.role-b { background: #3a2a2a; }
+main { position: absolute; inset: 56px 24px 24px; overflow: auto; }
+h1 { margin: 0 0 4px; font-size: 18px; }
+h2 { margin: 16px 0 4px; font-size: 13px; text-transform: uppercase; opacity: .7; }
+pre { margin: 0; padding: 8px; background: rgba(0,0,0,.35); border-radius: 6px;
+      white-space: pre-wrap; font: 11px ui-monospace, Menlo, monospace; }
+.controls { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+button { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid #8894a8;
+         background: #3c4c68; color: inherit; cursor: pointer; }
+.region { position: absolute; display: none; z-index: 10; box-sizing: border-box;
+          font: 600 11px -apple-system, sans-serif; color: #000;
+          align-items: center; justify-content: center; }
+#notch-left { background: #ff9f1c; }
+#notch-right { background: #2ec4b6; }
+#housing { background: #000; }
+.region.shown { display: flex; }
+.region.hit { outline: 3px solid #fff; outline-offset: -3px; }

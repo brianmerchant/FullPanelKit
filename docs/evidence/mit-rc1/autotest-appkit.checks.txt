@@ -1,0 +1,50 @@
+FullPanelAttachDemo autotest PASS display has a camera housing screen {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS window is the application's NSWindow subclass FullPanelAttachDemo.FullPanelAppKitDemoWindow
+FullPanelAttachDemo autotest PASS FullPanelSession attached and enabled 
+FullPanelAttachDemo autotest PASS attaching modified neither the subclass nor NSWindow 
+FullPanelAttachDemo autotest PASS runtime class is the subclass or AppKit's KVO subclass of it ..NSKVONotifying_FullPanelAttachDemo.FullPanelAppKitDemoWindow
+FullPanelAttachDemo autotest PASS ordinary NSWindowController and delegate 
+FullPanelAttachDemo autotest PASS control window is a plain NSWindow, never attached 
+FullPanelAttachDemo autotest PASS subclass-cycle1 state active 2
+FullPanelAttachDemo autotest PASS subclass-cycle1 frame covers whole display {{0, 0}, {1800, 1169}} vs {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 WindowServer bounds cover whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 content view covers whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 content reaches both side areas left {{0, 0}, {790, 38}} right {{1010, 0}, {790, 38}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 menu-bar override submitted 
+FullPanelAttachDemo autotest PASS subclass-cycle1 clicks reach both side areas left 1 right 1
+FullPanelAttachDemo autotest PASS subclass-cycle1 delegate saw didEnterFullScreen didEnterFS=1 didResize=3 willEnterFS=1
+FullPanelAttachDemo autotest PASS subclass-cycle1 control window untouched {{524, 261}, {800, 588}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 exit: state inactive 1
+FullPanelAttachDemo autotest PASS subclass-cycle1 exit: windowed frame restored {{500, 277}, {800, 568}} vs {{500, 277}, {800, 568}}
+FullPanelAttachDemo autotest PASS subclass-cycle1 exit: presentation options restored 0x0
+FullPanelAttachDemo autotest PASS subclass-cycle1 exit: menu override cleared 
+FullPanelAttachDemo autotest PASS subclass-cycle1 delegate saw didExitFullScreen didEnterFS=1 didExitFS=1 didResize=4 willEnterFS=1 willExitFS=1
+FullPanelAttachDemo autotest PASS subclass-cycle1 window identity, delegate, controller and content view unchanged 
+FullPanelAttachDemo autotest PASS subclass-cycle2 state active 2
+FullPanelAttachDemo autotest PASS subclass-cycle2 frame covers whole display {{0, 0}, {1800, 1169}} vs {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 WindowServer bounds cover whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 content view covers whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 content reaches both side areas left {{0, 0}, {790, 38}} right {{1010, 0}, {790, 38}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 menu-bar override submitted 
+FullPanelAttachDemo autotest PASS subclass-cycle2 clicks reach both side areas left 1 right 1
+FullPanelAttachDemo autotest PASS subclass-cycle2 delegate saw didEnterFullScreen didEnterFS=2 didExitFS=1 didResize=5 willEnterFS=2 willExitFS=1
+FullPanelAttachDemo autotest PASS subclass-cycle2 control window untouched {{524, 261}, {800, 588}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 exit: state inactive 1
+FullPanelAttachDemo autotest PASS subclass-cycle2 exit: windowed frame restored {{500, 277}, {800, 568}} vs {{500, 277}, {800, 568}}
+FullPanelAttachDemo autotest PASS subclass-cycle2 exit: presentation options restored 0x0
+FullPanelAttachDemo autotest PASS subclass-cycle2 exit: menu override cleared 
+FullPanelAttachDemo autotest PASS subclass-cycle2 delegate saw didExitFullScreen didEnterFS=2 didExitFS=2 didResize=6 willEnterFS=2 willExitFS=2
+FullPanelAttachDemo autotest PASS subclass-cycle2 window identity, delegate, controller and content view unchanged 
+FullPanelAttachDemo autotest PASS detach: session detached and disabled, no session for the window 
+FullPanelAttachDemo autotest PASS detach: lifecycle observers removed 
+FullPanelAttachDemo autotest PASS detach: window style restored fullSize false transparent false
+FullPanelAttachDemo autotest PASS detach: identity, delegate, controller, content view unchanged 
+FullPanelAttachDemo autotest PASS re-attach gives a new enabled session 
+FullPanelAttachDemo autotest PASS re-attach: active and covering the whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS re-attach exit: windowed frame and presentation restored {{500, 277}, {800, 568}}
+FullPanelAttachDemo autotest PASS after re-attach: identity, delegate, controller, content view unchanged 
+FullPanelAttachDemo autotest PASS control window untouched at end none
+FullPanelAttachDemo autotest PASS NSWindow method table unchanged at end 
+FullPanelAttachDemo autotest PASS subclass method table unchanged at end (fullscreen cycles, detach, re-attach) 
+FullPanelAttachDemo autotest PASS close: system state restored, session stays attached (window may be shown again) 0x0
+FullPanelAttachDemo autotest done: PASS (49 checks, 0 failures)

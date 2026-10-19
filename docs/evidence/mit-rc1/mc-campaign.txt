@@ -1,0 +1,20 @@
+started 2026-10-19 13:04:10 CDT
+sdk-tree ad52530672b7326d0bb55104b99703e4f5f85378
+binary 8e7e3458c874d1656ea04115dab9b8e4da15361eddd059a6a8a13e086b89f7b8
+macos 27.0.1 (26A434) MacBookPro18,3
+screen screens=1 builtin=1800x1169 px=3600x2338 hz=120 inset=38 modeid=66
+mode fpwindow options [] routes [thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] batches 10
+AppleMenuBarVisibleInFullscreen=0 
+AppleSpacesSwitchOnActivate=1 
+spans-displays=0 
+finished 2026-10-19 13:19:56 CDT
+b01: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b02: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b03: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b04: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b05: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b06: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b07: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b08: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b09: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+b10: 10 Mission Control returns judged: 10 PASS, 0 FAIL

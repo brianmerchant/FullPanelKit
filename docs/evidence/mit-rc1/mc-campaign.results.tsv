@@ -1,0 +1,140 @@
+== b01 (fpwindow ) 13:04:12 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b01	R0	entry	ok	band[left=1.00 right=1.00]
+b01	R1	thumb	PASS	shown 501ms, mc closed 115ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R2	away-thumb	PASS	shown 622ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R3	thumb	PASS	shown 504ms, mc closed 109ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R4	away-thumb	PASS	shown 662ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R5	thumb	PASS	shown 520ms, mc closed 105ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R6	away-thumb	PASS	shown 650ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R7	thumb	PASS	shown 511ms, mc closed 88ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R8	away-thumb	PASS	shown 665ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R9	thumb	PASS	shown 541ms, mc closed 79ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	R10	away-thumb	PASS	shown 632ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=790
+b01	exit	windowed again
+b01: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b02 (fpwindow ) 13:05:47 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b02	R0	entry	ok	band[left=1.00 right=1.00]
+b02	R1	thumb	PASS	shown 556ms, mc closed 88ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R2	away-thumb	PASS	shown 694ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R3	thumb	PASS	shown 547ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R4	away-thumb	PASS	shown 640ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R5	thumb	PASS	shown 530ms, mc closed 59ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R6	away-thumb	PASS	shown 628ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R7	thumb	PASS	shown 503ms, mc closed 88ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R8	away-thumb	PASS	shown 640ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R9	thumb	PASS	shown 497ms, mc closed 95ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	R10	away-thumb	PASS	shown 624ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=831
+b02	exit	windowed again
+b02: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b03 (fpwindow ) 13:07:21 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b03	R0	entry	ok	band[left=1.00 right=1.00]
+b03	R1	thumb	PASS	shown 515ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R2	away-thumb	PASS	shown 618ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R3	thumb	PASS	shown 486ms, mc closed 110ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R4	away-thumb	PASS	shown 656ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R5	thumb	PASS	shown 538ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R6	away-thumb	PASS	shown 636ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R7	thumb	PASS	shown 502ms, mc closed 101ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R8	away-thumb	PASS	shown 627ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R9	thumb	PASS	shown 516ms, mc closed 107ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	R10	away-thumb	PASS	shown 634ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=872
+b03	exit	windowed again
+b03: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b04 (fpwindow ) 13:08:56 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b04	R0	entry	ok	band[left=1.00 right=1.00]
+b04	R1	thumb	PASS	shown 507ms, mc closed 90ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R2	away-thumb	PASS	shown 615ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R3	thumb	PASS	shown 508ms, mc closed 95ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R4	away-thumb	PASS	shown 625ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R5	thumb	PASS	shown 516ms, mc closed 83ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R6	away-thumb	PASS	shown 636ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R7	thumb	PASS	shown 520ms, mc closed 93ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R8	away-thumb	PASS	shown 634ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R9	thumb	PASS	shown 517ms, mc closed 94ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	R10	away-thumb	PASS	shown 629ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=913
+b04	exit	windowed again
+b04: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b05 (fpwindow ) 13:10:29 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b05	R0	entry	ok	band[left=1.00 right=1.00]
+b05	R1	thumb	PASS	shown 516ms, mc closed 82ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R2	away-thumb	PASS	shown 660ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R3	thumb	PASS	shown 488ms, mc closed 87ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R4	away-thumb	PASS	shown 639ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R5	thumb	PASS	shown 542ms, mc closed 84ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R6	away-thumb	PASS	shown 636ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R7	thumb	PASS	shown 537ms, mc closed 107ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R8	away-thumb	PASS	shown 633ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R9	thumb	PASS	shown 502ms, mc closed 104ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	R10	away-thumb	PASS	shown 612ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=954
+b05	exit	windowed again
+b05: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b06 (fpwindow ) 13:12:03 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b06	R0	entry	ok	band[left=1.00 right=1.00]
+b06	R1	thumb	PASS	shown 534ms, mc closed 90ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R2	away-thumb	PASS	shown 657ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R3	thumb	PASS	shown 534ms, mc closed 92ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R4	away-thumb	PASS	shown 653ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R5	thumb	PASS	shown 522ms, mc closed 108ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R6	away-thumb	PASS	shown 645ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R7	thumb	PASS	shown 506ms, mc closed 84ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R8	away-thumb	PASS	shown 633ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R9	thumb	PASS	shown 507ms, mc closed 79ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	R10	away-thumb	PASS	shown 624ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=995
+b06	exit	windowed again
+b06: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b07 (fpwindow ) 13:13:39 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b07	R0	entry	ok	band[left=1.00 right=1.00]
+b07	R1	thumb	PASS	shown 519ms, mc closed 84ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R2	away-thumb	PASS	shown 664ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R3	thumb	PASS	shown 528ms, mc closed 72ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R4	away-thumb	PASS	shown 637ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R5	thumb	PASS	shown 517ms, mc closed 76ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R6	away-thumb	PASS	shown 628ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R7	thumb	PASS	shown 506ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R8	away-thumb	PASS	shown 645ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R9	thumb	PASS	shown 537ms, mc closed 77ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	R10	away-thumb	PASS	shown 665ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1036
+b07	exit	windowed again
+b07: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b08 (fpwindow ) 13:15:14 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b08	R0	entry	ok	band[left=1.00 right=1.00]
+b08	R1	thumb	PASS	shown 534ms, mc closed 109ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R2	away-thumb	PASS	shown 612ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R3	thumb	PASS	shown 523ms, mc closed 78ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R4	away-thumb	PASS	shown 625ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R5	thumb	PASS	shown 547ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R6	away-thumb	PASS	shown 628ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R7	thumb	PASS	shown 519ms, mc closed 77ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R8	away-thumb	PASS	shown 664ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R9	thumb	PASS	shown 489ms, mc closed 90ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	R10	away-thumb	PASS	shown 703ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1077
+b08	exit	windowed again
+b08: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b09 (fpwindow ) 13:16:49 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b09	R0	entry	ok	band[left=1.00 right=1.00]
+b09	R1	thumb	PASS	shown 517ms, mc closed 77ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R2	away-thumb	PASS	shown 642ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R3	thumb	PASS	shown 502ms, mc closed 94ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R4	away-thumb	PASS	shown 614ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R5	thumb	PASS	shown 517ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R6	away-thumb	PASS	shown 640ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R7	thumb	PASS	shown 497ms, mc closed 102ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R8	away-thumb	PASS	shown 644ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R9	thumb	PASS	shown 498ms, mc closed 84ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	R10	away-thumb	PASS	shown 669ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1118
+b09	exit	windowed again
+b09: 10 Mission Control returns judged: 10 PASS, 0 FAIL
+== b10 (fpwindow ) 13:18:23 binary=8e7e3458c874d165 routes=[thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb thumb away-thumb] stop-on-fail=1
+b10	R0	entry	ok	band[left=1.00 right=1.00]
+b10	R1	thumb	PASS	shown 528ms, mc closed 97ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R2	away-thumb	PASS	shown 633ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R3	thumb	PASS	shown 496ms, mc closed 103ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R4	away-thumb	PASS	shown 622ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R5	thumb	PASS	shown 532ms, mc closed 86ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R6	away-thumb	PASS	shown 666ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R7	thumb	PASS	shown 521ms, mc closed 88ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R8	away-thumb	PASS	shown 665ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R9	thumb	PASS	shown 524ms, mc closed 104ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	R10	away-thumb	PASS	shown 627ms, mc closed 0ms after	band[left=1.00 right=1.00]	pres=0x40a	state=2	key=1	active=1	space=1159
+b10	exit	windowed again
+b10: 10 Mission Control returns judged: 10 PASS, 0 FAIL

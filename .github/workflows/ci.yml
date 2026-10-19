@@ -1,0 +1,38 @@
+# Build and unit tests on a hosted Mac. Manual only (workflow_dispatch): it
+# never runs on push, publishes nothing, creates no tag or release.
+#
+# A hosted runner has no notched display, no Screen Recording / Accessibility
+# grants and no interactive session, so it cannot run the hardware acceptance
+# tests (docs/TESTING.md). Geometry-dependent unit tests skip themselves there.
+name: CI (manual)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: |
+          sw_vers
+          xcodebuild -version
+          swift --version
+      - name: Build (warnings are errors for the library)
+        run: swift build -Xswiftc -warnings-as-errors -Xcc -Werror
+      - name: Unit tests
+        run: swift test
+      - name: Unit tests (Address Sanitizer)
+        run: swift test --sanitize=address
+      - name: Clean consumer
+        run: Tools/ConsumerCheck/check.sh HEAD
+      - name: Examples
+        run: |
+          (cd Examples/FullPanelDemo && swift build)
+          (cd Examples/FullPanelAttachDemo && swift build)
+          (cd Tools/SpacesHarness && swift build)

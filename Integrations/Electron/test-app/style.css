@@ -1,0 +1,109 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #15171c;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+  color: #e8e8e8;
+  font: 13px/1.4 -apple-system, system-ui, sans-serif;
+}
+
+body.role-b {
+  background-color: #2a2a2a;
+}
+
+/* Window dragging for the hidden titlebar, only while windowed: drag regions
+   swallow pointer events, which would hide notch-side clicks. */
+#drag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  -webkit-app-region: drag;
+}
+
+body.fullscreen #drag {
+  display: none;
+}
+
+.marker {
+  position: fixed;
+  display: none;
+  pointer-events: none;
+}
+
+#aux-left {
+  background: #ff00ff;
+}
+
+#aux-right {
+  background: #00ffff;
+}
+
+#housing {
+  box-sizing: border-box;
+  border: 2px dashed #ff3b30;
+}
+
+#panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(760px, calc(100vw - 32px));
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.72);
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+pre {
+  margin: 8px 0;
+  font: 12px/1.45 ui-monospace, Menlo, monospace;
+  white-space: pre-wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.row .label {
+  flex: 1 1 280px;
+}
+
+button {
+  font: inherit;
+  padding: 3px 10px;
+}
+
+.row .status {
+  flex: 1 1 100%;
+  font: 12px/1.4 ui-monospace, Menlo, monospace;
+  opacity: 0.85;
+}
+
+.verdict-pass {
+  color: #34c759;
+}
+
+.verdict-fail {
+  color: #ff453a;
+}

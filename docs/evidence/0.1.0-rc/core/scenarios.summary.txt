@@ -1,0 +1,21 @@
+macOS 27.0.1 (26A434) — results in <validation>/20-final-601d06a/scenarios
+A  fresh entry + 5 Mission Control returns
+  A-fresh: fresh done: 11 passed, 0 failed
+B  attach inside existing fullscreen
+  B-existing: existing done: 10 passed, 0 failed
+R1 restored into fullscreen + 5 returns
+  R1-restore: restoreCheck done: 13 passed, 0 failed
+R2 two windows restored
+  R2-restore: restoreCheck done: 12 passed, 0 failed
+R3 attach inside the restored entry's willEnterFullScreen
+  R3-restore: restoreCheck done: 8 passed, 0 failed
+R4 attach 250 ms late (expected: documented fallback, no bounce)
+  R4-restore: restoreCheck done: 8 passed, 0 failed
+R5 restored while another app is in use, then activated like a Dock click + 5 returns
+  R5-restore: restoreCheck done: 15 passed, 0 failed
+
+Recovery path per Mission Control return (expect 5 each):
+  A-fresh     away=5 rearm=5 ready(fromAway)=5 reassert=5
+  R1-restore  away=5 rearm=5 ready(fromAway)=5 reassert=5
+  R5-restore  away=6 rearm=5 ready(fromAway)=6 reassert=5
+Screenshots of the housing band: <validation>/20-final-601d06a/scenarios/*/*.png (check them; the metric is non-black pixels)

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'">
+  <title>FullPanelKit Electron Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="drag"></div>
+  <div id="aux-left" class="marker"></div>
+  <div id="aux-right" class="marker"></div>
+  <div id="housing" class="marker"></div>
+  <main id="panel">
+    <h1 id="title"></h1>
+    <pre id="readout"></pre>
+    <div id="controls" class="row"></div>
+    <div id="manual"></div>
+    <pre id="pointer-log"></pre>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

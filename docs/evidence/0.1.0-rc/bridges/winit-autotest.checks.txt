@@ -1,0 +1,147 @@
+# winit bridge autotest (winit 0.30)
+
+Result: 140/140 passed
+
+Recorded 2026-10-18 (local time 2026-10-17 evening) on release-candidate commit 30fa67b.
+Hardware: MacBook Pro 14-inch 2021 (MacBookPro18,3, M1 Pro), built-in display 1800x1169 pt, macOS 27.0.1 (26A434).
+
+PASS  ENV  built-in display with camera housing; system support available
+PASS  ENV.thread  calls off the main thread are refused without touching AppKit
+PASS  T1.class  winit window is WinitWindow : NSWindow, registered at run time
+PASS  T1.eligible  eligible for FullPanelSession (not an AppKit-owned class)
+PASS  T1.overlay  window A: full-size content view under a transparent titlebar (app configuration)
+PASS  T1.parts  delegate WinitWindowDelegate; handle view is the WinitView content view; layer-backed
+PASS  T2.attach  attach succeeds; session starts Disabled; window untouched
+PASS  T2.idempotent  second attach returns the existing session
+PASS  T2.owned  one live session, weakly tracked by the bridge
+PASS  T2.b  window B unaffected by A's attachment (same class, pass-through hooks)
+PASS  T8.enable-windowed  enable keeps frame and WindowServer bounds; adds fullScreenPrimary
+PASS  T8.disable-windowed  disable restores the original window exactly
+PASS  T3.active  native fullscreen entered, FullPanel Active
+PASS  T3.frame  frame equals the full screen frame
+PASS  T3.windowserver  WindowServer bounds cover the display
+PASS  T3.content  WinitView and softbuffer's layer cover the whole window
+PASS  T3.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T3.render  app drew both notch-side regions at the top of its surface
+PASS  T3.mouse.notch-left  click at the centre of notch-left: hit WinitView, delivered by winit in notch-left
+PASS  T3.mouse.notch-right  click at the centre of notch-right: hit WinitView, delivered by winit in notch-right
+PASS  T3.restored  exit restores frame, style and class
+PASS  T3.ws  WindowServer bounds match the restored frame
+PASS  T3.options  application presentation options restored
+PASS  T3.surface-restored  softbuffer surface follows the restored size
+PASS  T3.inactive  session Inactive (enabled, windowed) after exit
+PASS  T9.c1.active  native fullscreen entered, FullPanel Active
+PASS  T9.c1.frame  frame equals the full screen frame
+PASS  T9.c1.windowserver  WindowServer bounds cover the display
+PASS  T9.c1.content  WinitView and softbuffer's layer cover the whole window
+PASS  T9.c1.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T9.c1.render  app drew both notch-side regions at the top of its surface
+PASS  T9.c1.restored  exit restores frame, style and class
+PASS  T9.c1.ws  WindowServer bounds match the restored frame
+PASS  T9.c1.options  application presentation options restored
+PASS  T9.c1.surface-restored  softbuffer surface follows the restored size
+PASS  T9.c1.inactive  session Inactive (enabled, windowed) after exit
+PASS  T9.c2.active  native fullscreen entered, FullPanel Active
+PASS  T9.c2.frame  frame equals the full screen frame
+PASS  T9.c2.windowserver  WindowServer bounds cover the display
+PASS  T9.c2.content  WinitView and softbuffer's layer cover the whole window
+PASS  T9.c2.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T9.c2.render  app drew both notch-side regions at the top of its surface
+PASS  T9.c2.mouse.notch-left  click at the centre of notch-left: hit WinitView, delivered by winit in notch-left
+PASS  T9.c2.mouse.notch-right  click at the centre of notch-right: hit WinitView, delivered by winit in notch-right
+PASS  T9.c2.restored  exit restores frame, style and class
+PASS  T9.c2.ws  WindowServer bounds match the restored frame
+PASS  T9.c2.options  application presentation options restored
+PASS  T9.c2.surface-restored  softbuffer surface follows the restored size
+PASS  T9.c2.inactive  session Inactive (enabled, windowed) after exit
+PASS  T9.c3.active  native fullscreen entered, FullPanel Active
+PASS  T9.c3.frame  frame equals the full screen frame
+PASS  T9.c3.windowserver  WindowServer bounds cover the display
+PASS  T9.c3.content  WinitView and softbuffer's layer cover the whole window
+PASS  T9.c3.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T9.c3.render  app drew both notch-side regions at the top of its surface
+PASS  T9.c3.restored  exit restores frame, style and class
+PASS  T9.c3.ws  WindowServer bounds match the restored frame
+PASS  T9.c3.options  application presentation options restored
+PASS  T9.c3.surface-restored  softbuffer surface follows the restored size
+PASS  T9.c3.inactive  session Inactive (enabled, windowed) after exit
+PASS  T6.b-fullscreen  window B gets ordinary fullscreen (camera-housing band excluded)
+PASS  T6.b-mouse  window B still receives clicks at the top of its content
+PASS  T6.b-restored  window B restored after its fullscreen
+PASS  T6.a-untouched  window A unaffected by B's fullscreen
+PASS  T8.disable-fs.active  native fullscreen entered, FullPanel Active
+PASS  T8.disable-fs.frame  frame equals the full screen frame
+PASS  T8.disable-fs.windowserver  WindowServer bounds cover the display
+PASS  T8.disable-fs.content  WinitView and softbuffer's layer cover the whole window
+PASS  T8.disable-fs.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T8.disable-fs.render  app drew both notch-side regions at the top of its surface
+PASS  T8.disable-fs.menubar  disable inside fullscreen restores ordinary fullscreen presentation options at once
+PASS  T8.disable-fs.restored  exit restores frame, style and class
+PASS  T8.disable-fs.ws  WindowServer bounds match the restored frame
+PASS  T8.disable-fs.options  application presentation options restored
+PASS  T8.disable-fs.surface-restored  softbuffer surface follows the restored size
+PASS  T8.detach-fs.active  native fullscreen entered, FullPanel Active
+PASS  T8.detach-fs.frame  frame equals the full screen frame
+PASS  T8.detach-fs.windowserver  WindowServer bounds cover the display
+PASS  T8.detach-fs.content  WinitView and softbuffer's layer cover the whole window
+PASS  T8.detach-fs.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T8.detach-fs.render  app drew both notch-side regions at the top of its surface
+PASS  T8.detach-fs.restored  exit restores frame, style and class
+PASS  T8.detach-fs.ws  WindowServer bounds match the restored frame
+PASS  T8.detach-fs.options  application presentation options restored
+PASS  T8.detach-fs.surface-restored  softbuffer surface follows the restored size
+PASS  T8.detach-fs.session  detached: no session, nothing live in the bridge
+PASS  T8.reattach  reattach creates a new session (not already attached)
+PASS  T8.reattach.active  native fullscreen entered, FullPanel Active
+PASS  T8.reattach.frame  frame equals the full screen frame
+PASS  T8.reattach.windowserver  WindowServer bounds cover the display
+PASS  T8.reattach.content  WinitView and softbuffer's layer cover the whole window
+PASS  T8.reattach.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T8.reattach.render  app drew both notch-side regions at the top of its surface
+PASS  T8.reattach.mouse.notch-left  click at the centre of notch-left: hit WinitView, delivered by winit in notch-left
+PASS  T8.reattach.mouse.notch-right  click at the centre of notch-right: hit WinitView, delivered by winit in notch-right
+PASS  T8.reattach.restored  exit restores frame, style and class
+PASS  T8.reattach.ws  WindowServer bounds match the restored frame
+PASS  T8.reattach.options  application presentation options restored
+PASS  T8.reattach.surface-restored  softbuffer surface follows the restored size
+PASS  T8.reattach.inactive  session Inactive (enabled, windowed) after exit
+PASS  T8.detach-windowed  windowed detach restores the original style, frame unchanged
+PASS  T8.reattach2.active  native fullscreen entered, FullPanel Active
+PASS  T8.reattach2.frame  frame equals the full screen frame
+PASS  T8.reattach2.windowserver  WindowServer bounds cover the display
+PASS  T8.reattach2.content  WinitView and softbuffer's layer cover the whole window
+PASS  T8.reattach2.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T8.reattach2.render  app drew both notch-side regions at the top of its surface
+PASS  T8.reattach2.restored  exit restores frame, style and class
+PASS  T8.reattach2.ws  WindowServer bounds match the restored frame
+PASS  T8.reattach2.options  application presentation options restored
+PASS  T8.reattach2.surface-restored  softbuffer surface follows the restored size
+PASS  T8.reattach2.inactive  session Inactive (enabled, windowed) after exit
+PASS  T11.two-sessions  a second attached window has its own session
+PASS  T11.c.active  native fullscreen entered, FullPanel Active
+PASS  T11.c.frame  frame equals the full screen frame
+PASS  T11.c.windowserver  WindowServer bounds cover the display
+PASS  T11.c.content  WinitView and softbuffer's layer cover the whole window
+PASS  T11.c.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T11.c.render  app drew both notch-side regions at the top of its surface
+PASS  T11.c.mouse.notch-left  click at the centre of notch-left: hit WinitView, delivered by winit in notch-left
+PASS  T11.c.mouse.notch-right  click at the centre of notch-right: hit WinitView, delivered by winit in notch-right
+PASS  T11.a-independent  window A stays windowed and Inactive while C is Active
+PASS  T11.c-independent  disabling A does not affect C's active session
+PASS  T10.close.0  dropping the winit Window detaches; session released; stale handle rejected
+PASS  T10.close.1  dropping the winit Window detaches; session released; stale handle rejected
+PASS  T10.close.2  dropping the winit Window detaches; session released; stale handle rejected
+PASS  T10.close-fullscreen  closing in FullPanel fullscreen restores presentation options
+PASS  T10.records  bridge kept one weak record per attachment, none alive after close
+PASS  T12.framed-enable  framed window: enable keeps the content size, frame shrinks by the titlebar
+PASS  T12.framed.active  native fullscreen entered, FullPanel Active
+PASS  T12.framed.frame  frame equals the full screen frame
+PASS  T12.framed.windowserver  WindowServer bounds cover the display
+PASS  T12.framed.content  WinitView and softbuffer's layer cover the whole window
+PASS  T12.framed.surface  winit inner size and softbuffer surface equal the screen in pixels
+PASS  T12.framed.render  app drew both notch-side regions at the top of its surface
+PASS  T12.framed.mouse.notch-left  click at the centre of notch-left: hit WinitView, delivered by winit in notch-left
+PASS  T12.framed.mouse.notch-right  click at the centre of notch-right: hit WinitView, delivered by winit in notch-right
+PASS  T12.framed-exit  framed window: exit restores the enabled frame
+PASS  T12.framed-disable  framed window: disable restores the original style and frame
+PASS  END  window A attached, enabled, windowed; B unattached, same class and style

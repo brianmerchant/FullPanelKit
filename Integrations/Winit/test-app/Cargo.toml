@@ -1,0 +1,13 @@
+[package]
+name = "fullpanel-winit-test"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[dependencies]
+winit = { workspace = true }
+fullpanelkit-winit = { path = "../fullpanelkit-winit" }
+raw-window-handle = "0.6"
+softbuffer = { version = "0.4", default-features = false }
+serde_json = "1"

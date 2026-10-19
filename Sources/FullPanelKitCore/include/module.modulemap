@@ -1,0 +1,12 @@
+// FullPanelKitCore module. The public API is the umbrella header; the pure
+// decision functions (FPKDecisions.h) are an explicit submodule for
+// FullPanelKit's own tests only and are not public API.
+module FullPanelKitCore {
+    umbrella header "FullPanelKitCore.h"
+    export *
+
+    explicit module Decisions {
+        header "FPKDecisions.h"
+        export *
+    }
+}

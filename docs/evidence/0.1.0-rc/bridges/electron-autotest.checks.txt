@@ -1,0 +1,72 @@
+# Electron bridge autotest (Electron 44.7.0)
+
+Result: 65/65 passed
+
+Recorded 2026-10-18 (local time 2026-10-17 evening) on release-candidate commit 30fa67b.
+Hardware: MacBook Pro 14-inch 2021 (MacBookPro18,3, M1 Pro), built-in display 1800x1169 pt, macOS 27.0.1 (26A434).
+
+PASS  P1.1  Addon loads into Electron 44.7.0 (Node-API)
+PASS  P1.2  Calls run on the macOS main thread
+PASS  P1.dup  FullPanelKitCore classes come from this addon only
+PASS  P1.3-A  A: getNativeWindowHandle() is a pointer-sized Buffer
+PASS  P1.4-A  A: handle is an NSView of a live window (not the NSWindow)
+PASS  P1.5-A  A: owning NSWindow found
+PASS  P1.6-A  A: class ElectronNSWindow, runtime class NSKVONotifying_ElectronNSWindow
+PASS  P1.7-A  A: class is eligible for FullPanelSession attachment
+PASS  P1.3-B  B: getNativeWindowHandle() is a pointer-sized Buffer
+PASS  P1.4-B  B: handle is an NSView of a live window (not the NSWindow)
+PASS  P1.5-B  B: owning NSWindow found
+PASS  P1.6-B  B: class ElectronNSWindow, runtime class NSKVONotifying_ElectronNSWindow
+PASS  P1.7-B  B: class is eligible for FullPanelSession attachment
+PASS  P1.safe  Malformed, null and unknown handles are rejected without dereferencing
+PASS  ENV  Test windows are on the active Space and settled (leave the Mac idle during the run)
+PASS  R1  Root cause: Electron reports the whole frame as content; AppKit adds a titlebar back
+PASS  A.attach  Attach FullPanelSession to window A
+PASS  A.enable  Enable FullPanel on window A
+PASS  R2  With fullSizeContentView the same conversion keeps the frame (no growth)
+PASS  W1  Enabling keeps the frame, content bounds and WindowServer bounds
+PASS  W2  Enabling keeps the renderer viewport and traffic lights
+PASS  W3  Enabling changes only fullSizeContentView (and fullScreenPrimary if missing)
+PASS  L1.disable  Disable (windowed): Disabled, original style, same frame and WindowServer bounds
+PASS  L1.correction  Disable corrected exactly the titlebar growth (32 pt), once
+PASS  L1.reenable  Re-enable (windowed): Inactive, enabled style, same frame, no correction
+PASS  T1  Fullscreen entered with BrowserWindow.setFullScreen(true) (native, not simple)
+PASS  T1.state  FullPanel state is Active
+PASS  T2  NSWindow frame covers the whole screen
+PASS  T2.baseline  NSWindow frame is 1800×1169 (hardware baseline) (informational)
+PASS  T3  WindowServer bounds cover the display
+PASS  T4.viewport  Renderer viewport equals the native content view (recorded separately)
+PASS  T4  Chromium rendered the markers in both notch-side regions (capturePage)
+PASS  T8  Exit restores the windowed frame (native and WindowServer), state Inactive
+PASS  F2.1.windowed  Moved/resized to 900×600: native frame and WindowServer agree
+PASS  F2.1.fullscreen  Fullscreen: Active, frame covers screen, WindowServer covers display
+PASS  F2.1.exit  Exit restores the moved/resized frame (native and WindowServer), no correction needed
+PASS  F2.2.windowed  Moved/resized to 1120×720: native frame and WindowServer agree
+PASS  F2.2.fullscreen  Fullscreen: Active, frame covers screen, WindowServer covers display
+PASS  F2.2.exit  Exit restores the moved/resized frame (native and WindowServer), no correction needed
+PASS  F2.3.windowed  Moved/resized to 1000×680: native frame and WindowServer agree
+PASS  F2.3.fullscreen  Fullscreen: Active, frame covers screen, WindowServer covers display
+PASS  F2.3.exit  Exit restores the moved/resized frame (native and WindowServer), no correction needed
+PASS  F3  Disable inside fullscreen: exit restores the moved/resized frame and the original style
+PASS  F3.correction  The exit correction removed exactly the titlebar growth, once
+PASS  F3.reenable  Re-enable after that exit: Inactive, same frame
+PASS  F4  Detach inside fullscreen: exit restores the resized frame and the original style
+PASS  F5.ordinary  Without a session, entry is ordinary fullscreen
+PASS  F5.detach  Attach + enable + detach inside fullscreen: exit restores the windowed frame
+PASS  F5.exit  Attach + enable inside fullscreen: exit restores the windowed frame
+PASS  F5.next  The next entry is FullPanel: Active, whole display
+PASS  F5.restore  And its exit restores the windowed frame
+PASS  B.untouched  B kept its frame, WindowServer bounds and style through all of A's tests
+PASS  B.class  B is the same class as A and has no session
+PASS  B.ordinary  B uses ordinary fullscreen below the camera housing (native and WindowServer)
+PASS  B.A  A unaffected while B is fullscreen
+PASS  B.exit  B exit restores its frame (native and WindowServer); still no session
+PASS  C1.close  Closing an attached window detaches its session at Electron's 'closed' event
+PASS  C1.stale  A destroyed BrowserWindow and, once AppKit closed it, its raw handle are rejected
+PASS  C2.independent  Closing D leaves E attached and working
+PASS  C2.second  Closing E then releases its own session
+PASS  C3.repeat  Five create → attach → enable → close cycles each release their session
+PASS  C3.dealloc  Closed NSWindows deallocated (Electron lifecycle) (informational)
+PASS  C3.A  Window A is still attached after the other windows closed
+PASS  S1.windowed  Quit with an attached windowed window: clean exit, session detached when Electron closed the window
+PASS  S1.fullscreen  Quit with an attached fullscreen window: clean exit, session detached when Electron closed the window

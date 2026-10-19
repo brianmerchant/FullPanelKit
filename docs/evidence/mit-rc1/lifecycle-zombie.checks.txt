@@ -1,0 +1,29 @@
+FullPanelAttachDemo scenario PASS: L1 20 attach/detach cycles: frame unchanged {{623, 107}, {900, 568}} -> {{623, 107}, {900, 568}}
+FullPanelAttachDemo scenario PASS: L1 style, titlebar and collection behavior unchanged style 0x800f->0x800f cb 0x10080->0x10080
+FullPanelAttachDemo scenario PASS: L1 detached sessions freed 0 of 20 alive
+FullPanelAttachDemo scenario PASS: L1 no session left on the window 
+FullPanelAttachDemo scenario PASS: L1 re-attached 
+FullPanelAttachDemo scenario PASS: L2 entered fullscreen 
+FullPanelAttachDemo scenario PASS: L2 active before close 
+FullPanelAttachDemo scenario PASS: L2 close in fullscreen: session released or detached windowFreed=true
+FullPanelAttachDemo scenario PASS: L2 presentation options released 0x0
+FullPanelAttachDemo scenario PASS: L3 close during entry: same outcome as an ordinary window control=["freed": false, "inFullScreen": false, "presentation": "0", "visible": true] attached=["visible": true, "state": 1, "inFullScreen": false, "presentation": "0", "menuBarOverrideSubmitted": 0, "freed": false, "sessionAttached": true]
+FullPanelAttachDemo scenario PASS: L3 close during entry: no menu-bar override left ["visible": true, "state": 1, "inFullScreen": false, "presentation": "0", "menuBarOverrideSubmitted": 0, "freed": false, "sessionAttached": true]
+FullPanelAttachDemo scenario PASS: L3 close during entry: presentation options released 0x0
+FullPanelAttachDemo scenario PASS: L4 close during exit: same outcome as an ordinary window control=["inFullScreen": false, "freed": false, "presentation": "0", "visible": true] attached=["freed": false, "inFullScreen": false, "menuBarOverrideSubmitted": 0, "sessionAttached": true, "state": 1, "presentation": "0", "visible": true]
+FullPanelAttachDemo scenario PASS: L4 close during exit: no menu-bar override left ["freed": false, "inFullScreen": false, "menuBarOverrideSubmitted": 0, "sessionAttached": true, "state": 1, "presentation": "0", "visible": true]
+FullPanelAttachDemo scenario PASS: L4 close during exit: presentation options released 0x0
+FullPanelAttachDemo scenario PASS: first window still attached, enabled and windowed 
+FullPanelAttachDemo scenario PASS: L5 first window entered fullscreen 
+FullPanelAttachDemo scenario PASS: L5 second window entered fullscreen 
+FullPanelAttachDemo scenario PASS: L5 two distinct fullscreen Spaces 1308 1312
+FullPanelAttachDemo scenario PASS: L5 second window active, pixels rendered ["path": "/var/folders/p0/msvqkt7j1rq48ydtsbtf55j80000gn/T/lifecycle-L5-second.png", "left": 0.99, "right": 0.99]
+FullPanelAttachDemo scenario PASS: L5 first window still active in its own Space 
+FullPanelAttachDemo scenario PASS: L5 switch back to the first Space: active, pixels rendered shown=true pixels=["left": 0.99, "right": 0.99, "path": "/var/folders/p0/msvqkt7j1rq48ydtsbtf55j80000gn/T/lifecycle-L5-first.png"]
+FullPanelAttachDemo scenario PASS: L5 first window owns the forced presentation 0x40a
+FullPanelAttachDemo scenario PASS: L5 closing the other window keeps the first window's presentation 0x40a
+FullPanelAttachDemo scenario PASS: L5 first window still active and rendered after the other closed ["right": 0.99, "path": "/var/folders/p0/msvqkt7j1rq48ydtsbtf55j80000gn/T/lifecycle-L5-first-after-close.png", "left": 0.99]
+FullPanelAttachDemo scenario PASS: L5 first window exited 
+FullPanelAttachDemo scenario PASS: L5 presentation options released after the last exit 0x0
+FullPanelAttachDemo scenario PASS: L5 first window inactive after exit 
+scenario lifecycle done: 28 passed, 0 failed

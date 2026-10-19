@@ -1,0 +1,101 @@
+PASS ENV built-in display with camera housing; system support available
+PASS T1.class Tauri window is TaoWindow : NSWindow, registered at run time
+PASS T1.eligible eligible for FullPanelSession (not an AppKit-owned class)
+PASS T1.parts delegate TaoWindowDelegate, WKWebView present
+PASS T2.attach attach succeeds; session starts Disabled; window untouched
+PASS T2.idempotent second attach returns the existing session
+PASS T2.owned one live session, weakly tracked by the bridge
+PASS T2.b window B unaffected by A's attachment (same class, pass-through hooks)
+PASS T8.enable-windowed enable keeps frame and WindowServer bounds; adds fullScreenPrimary
+PASS T8.disable-windowed disable restores the original window exactly
+PASS T3.active native fullscreen entered, FullPanel Active
+PASS T3.frame frame equals the full screen frame
+PASS T3.windowserver WindowServer bounds cover the display
+PASS T3.webview WKWebView frame covers the whole window
+PASS T3.viewport web viewport equals the screen size
+PASS T3.regions page content at both notch-side regions
+PASS T3.restored exit restores frame, style and class
+PASS T3.ws WindowServer bounds match the restored frame
+PASS T3.options application presentation options restored
+PASS T3.inactive session Inactive (enabled, windowed) after exit
+PASS T9.c1.active native fullscreen entered, FullPanel Active
+PASS T9.c1.frame frame equals the full screen frame
+PASS T9.c1.windowserver WindowServer bounds cover the display
+PASS T9.c1.webview WKWebView frame covers the whole window
+PASS T9.c1.viewport web viewport equals the screen size
+PASS T9.c1.regions page content at both notch-side regions
+PASS T9.c1.restored exit restores frame, style and class
+PASS T9.c1.ws WindowServer bounds match the restored frame
+PASS T9.c1.options application presentation options restored
+PASS T9.c1.inactive session Inactive (enabled, windowed) after exit
+PASS T9.c2.active native fullscreen entered, FullPanel Active
+PASS T9.c2.frame frame equals the full screen frame
+PASS T9.c2.windowserver WindowServer bounds cover the display
+PASS T9.c2.webview WKWebView frame covers the whole window
+PASS T9.c2.viewport web viewport equals the screen size
+PASS T9.c2.regions page content at both notch-side regions
+PASS T9.c2.restored exit restores frame, style and class
+PASS T9.c2.ws WindowServer bounds match the restored frame
+PASS T9.c2.options application presentation options restored
+PASS T9.c2.inactive session Inactive (enabled, windowed) after exit
+PASS T9.c3.active native fullscreen entered, FullPanel Active
+PASS T9.c3.frame frame equals the full screen frame
+PASS T9.c3.windowserver WindowServer bounds cover the display
+PASS T9.c3.webview WKWebView frame covers the whole window
+PASS T9.c3.viewport web viewport equals the screen size
+PASS T9.c3.regions page content at both notch-side regions
+PASS T9.c3.restored exit restores frame, style and class
+PASS T9.c3.ws WindowServer bounds match the restored frame
+PASS T9.c3.options application presentation options restored
+PASS T9.c3.inactive session Inactive (enabled, windowed) after exit
+PASS T6.b-fullscreen window B gets ordinary fullscreen (camera-housing band excluded)
+PASS T6.b-restored window B restored after its fullscreen
+PASS T6.a-untouched window A unaffected by B's fullscreen
+PASS T8.disable-fs.active native fullscreen entered, FullPanel Active
+PASS T8.disable-fs.frame frame equals the full screen frame
+PASS T8.disable-fs.windowserver WindowServer bounds cover the display
+PASS T8.disable-fs.webview WKWebView frame covers the whole window
+PASS T8.disable-fs.viewport web viewport equals the screen size
+PASS T8.disable-fs.regions page content at both notch-side regions
+PASS T8.disable-fs.menubar disable inside fullscreen restores presentation options at once
+PASS T8.disable-fs.restored exit restores frame, style and class
+PASS T8.disable-fs.ws WindowServer bounds match the restored frame
+PASS T8.disable-fs.options application presentation options restored
+PASS T8.detach-fs.active native fullscreen entered, FullPanel Active
+PASS T8.detach-fs.frame frame equals the full screen frame
+PASS T8.detach-fs.windowserver WindowServer bounds cover the display
+PASS T8.detach-fs.webview WKWebView frame covers the whole window
+PASS T8.detach-fs.viewport web viewport equals the screen size
+PASS T8.detach-fs.regions page content at both notch-side regions
+PASS T8.detach-fs.restored exit restores frame, style and class
+PASS T8.detach-fs.ws WindowServer bounds match the restored frame
+PASS T8.detach-fs.options application presentation options restored
+PASS T8.detach-fs.session detached: no session, nothing live in the bridge
+PASS T8.reattach reattach creates a new session (not already attached)
+PASS T8.reattach.active native fullscreen entered, FullPanel Active
+PASS T8.reattach.frame frame equals the full screen frame
+PASS T8.reattach.windowserver WindowServer bounds cover the display
+PASS T8.reattach.webview WKWebView frame covers the whole window
+PASS T8.reattach.viewport web viewport equals the screen size
+PASS T8.reattach.regions page content at both notch-side regions
+PASS T8.reattach.restored exit restores frame, style and class
+PASS T8.reattach.ws WindowServer bounds match the restored frame
+PASS T8.reattach.options application presentation options restored
+PASS T8.reattach.inactive session Inactive (enabled, windowed) after exit
+PASS T8.detach-windowed windowed detach restores the original style, frame unchanged
+PASS T8.reattach2.active native fullscreen entered, FullPanel Active
+PASS T8.reattach2.frame frame equals the full screen frame
+PASS T8.reattach2.windowserver WindowServer bounds cover the display
+PASS T8.reattach2.webview WKWebView frame covers the whole window
+PASS T8.reattach2.viewport web viewport equals the screen size
+PASS T8.reattach2.regions page content at both notch-side regions
+PASS T8.reattach2.restored exit restores frame, style and class
+PASS T8.reattach2.ws WindowServer bounds match the restored frame
+PASS T8.reattach2.options application presentation options restored
+PASS T8.reattach2.inactive session Inactive (enabled, windowed) after exit
+PASS T10.close.0 close detaches; session released; stale handle rejected
+PASS T10.close.1 close detaches; session released; stale handle rejected
+PASS T10.close.2 close detaches; session released; stale handle rejected
+PASS T10.close-fullscreen closing in FullPanel fullscreen restores presentation options
+PASS T10.records bridge kept one weak record per attachment, none alive after close
+PASS END window A attached, enabled, windowed; B untouched

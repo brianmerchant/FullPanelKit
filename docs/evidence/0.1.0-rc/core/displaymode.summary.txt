@@ -1,0 +1,21 @@
+Modes: housing=1512x982 no-housing=1800x1125 current=1800x1169
+== control
+  entry band[left=0.00 right=0.00] fr={{0, 0}, {1800, 1130}}   shown=1
+  other-scale band[left=0.00 right=0.00] fr={{0, 0}, {1512, 949}}   shown=1
+  other-scale-reverted band[left=0.00 right=0.00] fr={{0, 0}, {1800, 1130}}   shown=1
+  no-housing band[band no-housing] fr={{0, 0}, {1800, 1125}}   shown=1
+  no-housing-reverted band[left=0.00 right=0.00] fr={{0, 0}, {1800, 1130}}   shown=1
+== session
+  entry band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+  other-scale band[left=1.00 right=1.00] fr={{0, 0}, {1512, 982}} state=2 reason=0 released=0 shown=1
+  other-scale-reverted band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+  no-housing band[band no-housing] fr={{0, 0}, {1800, 1125}} state=3 reason=1 released=1 shown=1
+  no-housing-reverted band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+== fpwindow
+  entry band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+  other-scale band[left=1.00 right=1.00] fr={{0, 0}, {1512, 982}} state=2 reason=0 released=0 shown=1
+  other-scale-reverted band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+  no-housing band[band no-housing] fr={{0, 0}, {1800, 1125}} state=3 reason=1 released=1 shown=1
+  no-housing-reverted band[left=1.00 right=1.00] fr={{0, 0}, {1800, 1169}} state=2 reason=0 released=0 shown=1
+Mode after the run: 1800x1169
+Logs and band captures: <validation>/20-final-601d06a/displaymode

@@ -1,0 +1,18 @@
+== electron pid=63290
+FullPanelKit Electron Test fs=false
+FullPanelKit Electron Test fs=false
+window #0 size=640x460
+AXFullScreen=true -> 0
+#0 = window B (control, ordinary fullscreen) fullscreen: left[nonblack=0.00 mean=#000000 uniform=1.00] right[nonblack=0.00 mean=#000000 uniform=1.00] app colours #ff00ff / #00ffff
+  A: FullPanelKit Electron Test fs=true
+window #0 size=1800x1130
+AXFullScreen=false -> 0
+window #1 size=1000x680
+AXFullScreen=true -> 0
+#1 = window A (FullPanelSession) fullscreen: left[nonblack=1.00 mean=#f058f8 uniform=1.00] right[nonblack=1.00 mean=#83fafd uniform=1.00] app colours #ff00ff / #00ffff
+  B: FullPanelKit Electron Test fs=true
+no window #1
+
+Note: AX window order is not the app's role order; #1 (1000x680, window A's original frame) is the FullPanel window.
+The exit call for #1 missed because AppKit reorders windows in fullscreen; the app was quit while A was fullscreen.
+PNG names were corrected afterwards: electron-A-band.png = window A, electron-B-band.png = window B.

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FullPanel Tauri Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Positioned from the session geometry (window top-left coordinates). -->
+  <div id="notch-left" class="region">LEFT of camera housing</div>
+  <div id="housing" class="region"></div>
+  <div id="notch-right" class="region">RIGHT of camera housing</div>
+
+  <main>
+    <h1 id="title">FullPanel Tauri Test</h1>
+    <p id="role-note"></p>
+    <div class="controls" id="controls"></div>
+    <section>
+      <h2>State</h2>
+      <pre id="state">…</pre>
+    </section>
+    <section>
+      <h2>Pointer events</h2>
+      <pre id="pointer">Click or move anywhere, including the coloured notch-side regions.</pre>
+      <pre id="pointer-log"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

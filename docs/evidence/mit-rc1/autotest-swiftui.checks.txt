@@ -1,0 +1,82 @@
+FullPanelAttachDemo autotest PASS display has a camera housing screen {{0, 0}, {1800, 1169}} inset 38.0
+FullPanelAttachDemo autotest PASS SwiftUI window class kept SwiftUI.AppKitWindow
+FullPanelAttachDemo autotest PASS session attached and enabled 
+FullPanelAttachDemo autotest PASS ordinary window has no session 
+FullPanelAttachDemo autotest PASS ordinary window is the same class SwiftUI.AppKitWindow
+FullPanelAttachDemo autotest PASS cycle1 state active 2
+FullPanelAttachDemo autotest PASS cycle1 frame covers whole display {{0, 0}, {1800, 1169}} vs {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle1 WindowServer bounds cover whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle1 content view covers whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle1 menu-bar override submitted 
+FullPanelAttachDemo autotest PASS cycle1 layout has both side areas 
+FullPanelAttachDemo autotest PASS cycle1 window identity, delegate, controller unchanged 
+FullPanelAttachDemo autotest PASS cycle1 ordinary window untouched {{450, 281}, {900, 568}}
+FullPanelAttachDemo autotest PASS cycle1 clicks reach both side areas left 1 right 1
+FullPanelAttachDemo autotest PASS cycle1 window is key in fullscreen 
+FullPanelAttachDemo autotest PASS cycle1 exit: state inactive 1
+FullPanelAttachDemo autotest PASS cycle1 exit: windowed frame restored {{623, 107}, {900, 568}} vs {{623, 107}, {900, 568}}
+FullPanelAttachDemo autotest PASS cycle1 exit: presentation options restored 0x0
+FullPanelAttachDemo autotest PASS cycle1 exit: menu override cleared 
+FullPanelAttachDemo autotest PASS cycle2 state active 2
+FullPanelAttachDemo autotest PASS cycle2 frame covers whole display {{0, 0}, {1800, 1169}} vs {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle2 WindowServer bounds cover whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle2 content view covers whole display {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS cycle2 menu-bar override submitted 
+FullPanelAttachDemo autotest PASS cycle2 layout has both side areas 
+FullPanelAttachDemo autotest PASS cycle2 window identity, delegate, controller unchanged 
+FullPanelAttachDemo autotest PASS cycle2 ordinary window untouched {{450, 281}, {900, 568}}
+FullPanelAttachDemo autotest PASS cycle2 clicks reach both side areas left 1 right 1
+FullPanelAttachDemo autotest PASS cycle2 window is key in fullscreen 
+FullPanelAttachDemo autotest PASS cycle2 exit: state inactive 1
+FullPanelAttachDemo autotest PASS cycle2 exit: windowed frame restored {{623, 107}, {900, 568}} vs {{623, 107}, {900, 568}}
+FullPanelAttachDemo autotest PASS cycle2 exit: presentation options restored 0x0
+FullPanelAttachDemo autotest PASS cycle2 exit: menu override cleared 
+FullPanelAttachDemo autotest PASS ordinary fullscreen gets AppKit's camera-safe frame, not FullPanel's {{0, 0}, {1800, 1130}}
+FullPanelAttachDemo autotest PASS ordinary fullscreen did not touch the attached session 
+FullPanelAttachDemo autotest PASS ordinary window frame restored {{450, 281}, {900, 568}}
+FullPanelAttachDemo autotest PASS FullPanelWindow still reaches FullPanel state 2 frame {{0, 0}, {1800, 1169}}
+FullPanelAttachDemo autotest PASS FullPanelWindow exit restores 
+FullPanelAttachDemo autotest PASS second attached window has its own session 
+FullPanelAttachDemo autotest PASS second window active 
+FullPanelAttachDemo autotest PASS first window unaffected 
+FullPanelAttachDemo autotest PASS second window exit 
+FullPanelAttachDemo autotest PASS closed window: session released or detached session alive: false window deallocated: true
+FullPanelAttachDemo autotest PASS detach cycle active 
+FullPanelAttachDemo autotest PASS detach in fullscreen: session detached, state disabled 
+FullPanelAttachDemo autotest PASS detach in fullscreen: menu override cleared 
+FullPanelAttachDemo autotest PASS detach in fullscreen: FullPanel presentation released 0x405
+FullPanelAttachDemo autotest PASS after detached exit: windowed frame restored {{623, 107}, {900, 568}}
+FullPanelAttachDemo autotest PASS after detached exit: window style restored 
+FullPanelAttachDemo autotest PASS re-attach gives a new enabled session 
+FullPanelAttachDemo autotest PASS same window after detach/re-attach 
+FullPanelAttachDemo autotest PASS AppKit window is a genuine NSWindow NSWindow
+FullPanelAttachDemo autotest PASS AppKit window has an ordinary NSWindowController 
+FullPanelAttachDemo autotest PASS AppKit window delegate is the ordinary delegate 
+FullPanelAttachDemo autotest PASS AppKit test and control windows are distinct 
+FullPanelAttachDemo autotest PASS NSWindow method table unchanged by the demo's setup 
+FullPanelAttachDemo autotest PASS AppKit window: attach rejected (unsupported window class) code 3: NSWindow is an AppKit class. FullPanelSession does not support AppKit's own window classes; create the window as a FullPanelWindow or your own subclass.
+FullPanelAttachDemo autotest PASS AppKit window: rejection names the AppKit class NSWindow is an AppKit class. FullPanelSession does not support AppKit's own window classes; create the window as a FullPanelWindow or your own subclass.
+FullPanelAttachDemo autotest PASS AppKit window: second attach also rejected 
+FullPanelAttachDemo autotest PASS control window never attached 
+FullPanelAttachDemo autotest PASS rejection left window, delegate, controller and class unchanged 
+FullPanelAttachDemo autotest PASS NSWindow method table unchanged by the rejected attach 
+FullPanelAttachDemo autotest PASS SwiftUI attached window still attached 
+FullPanelAttachDemo autotest PASS SwiftUI window class has no installed method (nothing hooked) 
+FullPanelAttachDemo autotest PASS KVO probe registered 
+FullPanelAttachDemo autotest PASS KVO probe left the window's delegate and controller alone 
+FullPanelAttachDemo autotest PASS control window has no probe and kept its size 
+FullPanelAttachDemo autotest PASS KVO probe removed 
+FullPanelAttachDemo autotest PASS no notifications after removal [:]
+FullPanelAttachDemo autotest PASS KVO probe can be restarted 
+FullPanelAttachDemo autotest PASS AppKit window fullscreen is AppKit's (no FullPanel session) 
+FullPanelAttachDemo autotest PASS AppKit window fullscreen: delegate was called didEnterFS=1 didResize=1 willEnterFS=1
+FullPanelAttachDemo autotest PASS AppKit window fullscreen exit: delegate was called 
+FullPanelAttachDemo autotest PASS AppKit window frame restored {{500, 285}, {800, 588}}
+FullPanelAttachDemo autotest PASS control window stayed windowed and untouched 
+FullPanelAttachDemo autotest PASS KVO probe observing before close 
+FullPanelAttachDemo autotest PASS KVO probe stopped at window close start runtime=NSKVONotifying_NSWindow public=NSWindow | stop (willClose)
+FullPanelAttachDemo autotest PASS delegate saw willClose 
+FullPanelAttachDemo autotest PASS repeated AppKit window create/close/release (5x): observers stopped, objects released 
+FullPanelAttachDemo autotest PASS NSWindow method table unchanged at end 
+FullPanelAttachDemo autotest PASS no AppKit test windows left open 0
+FullPanelAttachDemo autotest done: PASS (82 checks, 0 failures)

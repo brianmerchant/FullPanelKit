@@ -1,0 +1,11 @@
+== winit pid=62914
+FullPanelKit winit · b (control) · NoSession fs=false
+FullPanelKit winit · a (FullPanel) · Inactive fs=false
+AXFullScreen=true -> 0
+A fullscreen: left=0.00 right=0.00 (expected #ff8c1a / #14b8a6)
+  A: FullPanelKit winit · a (FullPanel) · Active fs=true
+AXFullScreen=false -> 0
+AXFullScreen=true -> 0
+B fullscreen: left=0.00 right=0.00 (expected #ff8c1a / #14b8a6)
+  B: FullPanelKit winit · b (control) · NoSession fs=true
+AXFullScreen=false -> 0

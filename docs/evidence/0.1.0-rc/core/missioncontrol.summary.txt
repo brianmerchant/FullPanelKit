@@ -1,0 +1,66 @@
+== control
+  entry t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  escape-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  thumb-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-thumb-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  away-thumb-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  switch-1 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  escape-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  thumb-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-thumb-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  away-thumb-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  switch-2 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  escape-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  thumb-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  large-thumb-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  away-thumb-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+  switch-3 t0.4[left=0.00 right=0.00] t1.2[left=0.00 right=0.00] t3.0[left=0.00 right=0.00] shown=1 state=-
+== session
+  entry t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-1 t0.4[left=0.99 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-2 t0.4[left=0.98 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-3 t0.4[left=0.99 right=0.99] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-3 t0.4[left=0.98 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+== fpwindow
+  entry t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-1 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-1 t0.4[left=0.98 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-2 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-2 t0.4[left=0.99 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  escape-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  thumb-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  large-thumb-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  away-thumb-3 t0.4[left=1.00 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+  switch-3 t0.4[left=0.99 right=1.00] t1.2[left=1.00 right=1.00] t3.0[left=1.00 right=1.00] shown=1 state=2
+
+Summary (shown at 3 s; FullPanel: teal >= 0.90 on both sides at 3 s; control: teal <= 0.05):
+  control  19/19
+  session  19/19
+  fpwindow 19/19
+Logs and band captures: <validation>/20-final-601d06a/missioncontrol

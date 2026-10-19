@@ -1,0 +1,36 @@
+# FullPanelAttachDemo lifecycle scenario (NSZombieEnabled, MallocScribble, MallocGuardEdges)
+
+Result: 28/28 passed
+
+Recorded 2026-10-17 on SDK code of commit 601d06a (functionally identical to the release candidate; later commits change comments, docs and one harness line).
+Hardware: MacBook Pro 14-inch 2021 (MacBookPro18,3, M1 Pro), built-in display 1800x1169 pt, macOS 27.0.1 (26A434).
+The first run of this scenario (lifecycle.json) passed 25/28; the 3 failures were a harness defect (L3/L4 reused a still-open window), fixed before this rerun. See docs/TESTING.md.
+
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  
+PASS  ?  

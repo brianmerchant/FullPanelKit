@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = ["fullpanelkit-tauri", "test-app"]
+
+[workspace.dependencies]
+tauri = { version = "=2.12.3", default-features = false, features = ["wry"] }
