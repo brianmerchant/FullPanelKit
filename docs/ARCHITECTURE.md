@@ -79,7 +79,14 @@ the presentation options and the titlebar window's click-through. A reveal
 is seen through AppKit's fullscreen titlebar window, whose `alphaValue`
 AppKit animates with the reveal (KVO, public API apart from the class name
 `NSToolbarFullScreenWindow`); `+[NSMenu menuBarVisible]` is the fallback when
-no titlebar window exists. Nothing in AppKit is swizzled for this; the
+no titlebar window exists. AppKit does not fade every titlebar window: for a
+window that does not reserve the menu bar (FullPanel) and whose titlebar is
+taller than the autohide height (a titlebar accessory view controller or a
+toolbar), it keeps the alpha at 1 for the whole entry, and it still sets that
+alpha on every reveal animation step. Until the titlebar window has been seen
+faded out, `menuBarVisible` (while the window's Space is active) decides, so a
+transient intent (Mission Control, a Space switch) cannot leave the reveal on
+(`FPKRevealVisibleNow`). Nothing in AppKit is swizzled for this; the
 reservation method is the only AppKit method FullPanelKit replaces.
 
 ## Lifecycle

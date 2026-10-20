@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright (c) 2026 Brian Merchant. Licensed under the MIT License (see LICENSE).
 #
-# smoke-fullpaneldemo.sh <outdir> [swiftui]
+# smoke-fullpaneldemo.sh <outdir> [swiftui|accessory]
 # FullPanelDemo (FullPanelWindow) on the built-in display: enter native
 # fullscreen (Control-Command-F), measure the band, click both band areas,
 # reveal the menu bar at the top edge (HID moves), move away, exit. Writes
@@ -19,6 +19,8 @@ if pgrep -f 'FullPanelDemo.app/Contents/MacOS' >/dev/null; then echo "another Fu
 if [ -e "$HOME/Downloads/FullPanelDemo-report.json" ]; then echo "~/Downloads/FullPanelDemo-report.json exists; move it first"; exit 1; fi
 ARGS=(-FullPanelTrace YES)
 [ "$VARIANT" = swiftui ] && ARGS+=(-FullPanelDemoSwiftUI YES)
+# accessory: AppKit window with a hidden titlebar accessory (opaque titlebar window).
+[ "$VARIANT" = accessory ] && ARGS+=(-FullPanelDemoTitlebarAccessory YES)
 step() { echo "== $1"; }
 front_is_demo() { [ "$("$CTL" front)" = "FullPanel Demo" ] || { echo "ABORT: frontmost is '$("$CTL" front)', not the demo; no keys sent"; exit 1; }; }
 report() {  # Cmd-R writes ~/Downloads/FullPanelDemo-report.json

@@ -14,9 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 ///   (measured with Tools/BehaviorProbes/RevealSignals). Its `alphaValue` is
 ///   observed with KVO, so there is no polling and no method replacement.
 ///   A reveal starts only while AppKit also intends the menu bar to be shown
-///   (`+[NSMenu menuBarVisible]`): with "Always show toolbar in full screen"
-///   the titlebar window is opaque without a reveal. Without a titlebar
-///   window, `menuBarVisible` alone is used.
+///   (`+[NSMenu menuBarVisible]`). AppKit keeps some titlebar windows opaque
+///   without a reveal: with "Always show toolbar in full screen", and when a
+///   FullPanel window (which does not reserve the menu bar) has a titlebar
+///   taller than the autohide height, such as one with a titlebar accessory
+///   view controller or a toolbar. Until the titlebar window has been seen
+///   faded out, the intent alone (while the window's Space is active) decides,
+///   still re-read on every alpha change AppKit makes; see
+///   FPKRevealVisibleNow. Without a titlebar window, `menuBarVisible` alone is
+///   used.
 /// - **Pass-through.** The titlebar window lies over the band. While no reveal
 ///   is on screen it ignores the mouse, so clicks reach the content beside the
 ///   camera housing. Its original setting is restored on `-stop`.
@@ -32,7 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) BOOL revealVisible;
 /// The titlebar window currently followed, if any.
 @property (nonatomic, readonly, nullable) NSWindow *titlebarWindow;
-/// "titlebar-alpha" or "menu-intent" (no titlebar window found).
+/// "titlebar-alpha", "titlebar-pinned" (its alpha has not faded out, so the
+/// intent decides) or "menu-intent" (no titlebar window found).
 @property (nonatomic, readonly) NSString *source;
 /// Whether pass-through is requested; applied to the current (and any
 /// recreated) titlebar window.

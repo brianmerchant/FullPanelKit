@@ -9,6 +9,7 @@
 #endif
 
 #import "FPKFullScreenTitlebar.h"
+#import "FPKDecisions.h"
 #import "FPKSupport.h"
 
 static char kFPKTitlebarAlphaContext;
@@ -27,6 +28,7 @@ static const CGFloat kFPKVisibleAlpha = 0.01;
     // Held strongly while observed, so KVO is always removed before the
     // titlebar window can go away.
     NSWindow *_observed;
+    BOOL _titlebarFades;          // _observed has been seen faded out
     BOOL _savedIgnoresMouse;
     BOOL _changedIgnoresMouse;
     NSView *_hiddenView;          // FullPanelHideTitlebarContent only
@@ -44,7 +46,10 @@ static const CGFloat kFPKVisibleAlpha = 0.01;
 
 - (NSWindow *)titlebarWindow { return _observed; }
 
-- (NSString *)source { return _observed ? @"titlebar-alpha" : @"menu-intent"; }
+- (NSString *)source {
+    if (!_observed) return @"menu-intent";
+    return _titlebarFades ? @"titlebar-alpha" : @"titlebar-pinned";
+}
 
 - (void)start {
     if (_running) return;
@@ -107,6 +112,7 @@ static const CGFloat kFPKVisibleAlpha = 0.01;
                                         (long)_observed.windowNumber]);
     }
     _observed = titlebar;
+    _titlebarFades = NO;
     _changedIgnoresMouse = NO;
     if (titlebar) {
         [titlebar addObserver:self forKeyPath:@"alphaValue" options:0
@@ -159,14 +165,15 @@ static const CGFloat kFPKVisibleAlpha = 0.01;
 }
 
 - (void)reread {
-    BOOL visible;
-    if (_observed) {
-        BOOL shown = _observed.alphaValue > kFPKVisibleAlpha;
-        // Starts with AppKit's intent, ends with the fade-out.
-        visible = shown && (_revealVisible || [NSMenu menuBarVisible]);
-    } else {
-        visible = [NSMenu menuBarVisible];
+    NSWindow *titlebar = _observed;
+    BOOL shown = titlebar && titlebar.alphaValue > kFPKVisibleAlpha;
+    // Only a titlebar window AppKit has faded out can end a reveal by fading.
+    if (titlebar && !shown && !_titlebarFades) {
+        _titlebarFades = YES;
+        FPKTrace(@"titlebar-fades", [NSString stringWithFormat:@"num=%ld", (long)titlebar.windowNumber]);
     }
+    BOOL visible = FPKRevealVisibleNow(titlebar != nil, _titlebarFades, shown, _revealVisible,
+                                       [NSMenu menuBarVisible], _window.isOnActiveSpace);
     if (visible == _revealVisible) return;
     _revealVisible = visible;
     FPKTrace(@"reveal", [NSString stringWithFormat:@"visible=%d source=%@", visible, self.source]);
@@ -191,9 +198,9 @@ static const CGFloat kFPKVisibleAlpha = 0.01;
 - (NSString *)traceDescription {
     NSWindow *titlebar = _observed;
     if (!titlebar) return [NSString stringWithFormat:@"titlebar=none reveal=%d", _revealVisible];
-    return [NSString stringWithFormat:@"titlebar=%ld alpha=%.2f ignoresMouse=%d passThrough=%d reveal=%d",
-            (long)titlebar.windowNumber, titlebar.alphaValue, titlebar.ignoresMouseEvents,
-            _passThrough, _revealVisible];
+    return [NSString stringWithFormat:@"titlebar=%ld alpha=%.2f fades=%d ignoresMouse=%d passThrough=%d reveal=%d",
+            (long)titlebar.windowNumber, titlebar.alphaValue, _titlebarFades,
+            titlebar.ignoresMouseEvents, _passThrough, _revealVisible];
 }
 
 - (void)dealloc {
