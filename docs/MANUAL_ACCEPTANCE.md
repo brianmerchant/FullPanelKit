@@ -8,7 +8,7 @@ result by itself.
 
 > **References.** Commit hashes in this document identify revisions in
 > FullPanelKit's private development history, which is not published
-> ([PROVENANCE.md](PROVENANCE.md#public-history)). "Release candidate" means
+> ([PROVENANCE.md](PROVENANCE.md#scope-of-this-release)). "Release candidate" means
 > the earlier, unpublished 0.1.0 candidate, which used the previous
 > fullscreen-frame geometry mechanism.
 

@@ -5,10 +5,9 @@ is approved. "Reviewed" means read and judged; "passed" means executed with
 the stated result. Nothing in this file publishes anything; publication
 steps are listed last and are performed by the maintainer.
 
-**Status 2026-10-19 (MIT release candidate, this repository's initial
-commit).** Sections 1–3 and 5 pass on the exact release tree. Section 4
-passes for everything automated; the manual checks, and the hardware that is
-not available, are open. Sections 6–7 are the maintainer's.
+**Status 2026-10-20.** Required automated tests, release restoration
+scenarios (77/77), and owner manual M1/M2 (11/11) passed. Unsupported or
+unavailable hardware remains documented. Publication is handled in §§6–7.
 
 ## 1. Source state
 
@@ -44,8 +43,8 @@ not available, are open. Sections 6–7 are the maintainer's.
 - [x] Acknowledgments: UTM and its contributors, OmacVM and Gilles Goetsch,
       Try Omarchy pull request #361 and its author, and the AI-assisted
       development statement (README "Development", PROVENANCE.md).
-- [ ] **Maintainer:** approve the MIT license, the copyright line and the
-      provenance wording.
+- [x] **Maintainer:** MIT licensing approved 2026-10-20. Copyright and
+      provenance wording reviewed for the public source repository.
 - [ ] Optional: counsel's view on the residual similarities with UTM's
       implementation (platform interface and general technique) and on
       AI-assisted authorship.
@@ -104,8 +103,7 @@ may be reported as passed from a simulation.
 
 ## 6. Package and release preparation (reviewed, not executed)
 
-- [ ] Tag name decided: `0.1.0` (Swift Package Manager accepts `0.1.0` and
-      `v0.1.0`; pick one and keep it).
+- [x] Tag name: `v0.1.0` (Swift Package Manager accepts this prefix).
 - [ ] Release notes drafted from the CHANGELOG entry, including the private-API
       warning, verified hardware and the not-verified list.
 - [ ] CI: [.github/workflows/ci.yml](../.github/workflows/ci.yml) is manual-only
@@ -117,7 +115,7 @@ may be reported as passed from a simulation.
 
 Not performed during preparation.
 
-1. Fill in the CHANGELOG date; commit.
+1. Confirm the CHANGELOG date and final README installation instructions; commit.
 2. Create the annotated tag and push the branch and tag to the new public
    repository.
 3. Create the GitHub release from the tag with the release notes.

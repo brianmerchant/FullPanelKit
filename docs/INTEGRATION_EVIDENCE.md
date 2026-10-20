@@ -5,7 +5,7 @@ repository, and on which revision. Status labels:
 
 > **References.** Commit hashes in this document identify revisions in
 > FullPanelKit's private development history, which is not published
-> ([PROVENANCE.md](PROVENANCE.md#public-history)). "Release candidate" means
+> ([PROVENANCE.md](PROVENANCE.md#scope-of-this-release)). "Release candidate" means
 > the earlier, unpublished 0.1.0 candidate, which used the previous
 > fullscreen-frame geometry mechanism.
 
@@ -36,7 +36,7 @@ acceptance run on SDK code that is functionally identical to the RC.
 | Integration | Kind | Source | Status |
 | --- | --- | --- | --- |
 | `FullPanelWindow` | AppKit subclass | [Examples/FullPanelDemo](../Examples/FullPanelDemo) | **Hardware verified** (this release: 100 Mission Control returns, Dock/Command-Tab; RC and 601d06a: demo and suite) |
-| `FullPanelSession`, SwiftUI `WindowGroup` | Existing-window attachment | [Examples/FullPanelAttachDemo](../Examples/FullPanelAttachDemo) | **Hardware verified** (this release: autotest 82/82, lifecycle 28/28; 601d06a: scenarios) |
+| `FullPanelSession`, SwiftUI `WindowGroup` | Existing-window attachment | [Examples/FullPanelAttachDemo](../Examples/FullPanelAttachDemo) | **Hardware verified** (this release: autotest 82/82, lifecycle 28/28, restoration scenarios 77/77; 601d06a: earlier scenarios) |
 | `FullPanelSession`, your `NSWindow` subclass | Existing-window attachment | `FullPanelAttachDemo` (AppKit mode), [Tools/SpacesHarness](../Tools/SpacesHarness) | **Hardware verified** (this release: autotest 49/49; 601d06a) |
 | Electron 44.7.0 | Node-API addon | [Integrations/Electron](../Integrations/Electron) | **Experimental.** Runtime tested on this release (63/63) and on RC; band hardware-captured on RC; Mission Control and clicks not verified with the bridge |
 | Tauri 2.12.3 | Rust crate + C-ABI bridge | [Integrations/Tauri](../Integrations/Tauri) | **Experimental.** Same as Electron (101/101 on this release) |
@@ -70,7 +70,8 @@ so a checkout of the release tag builds against exactly that release.
 | Hardware | Scenarios 77/77 with band captures: A fresh entry, B attach inside fullscreen (documented fallback), R1–R5 windows restored into fullscreen at launch ([summary](evidence/0.1.0-rc/core/scenarios.summary.txt), [entry](evidence/0.1.0-rc/core/scenario-A-entered.png), [after Mission Control](evidence/0.1.0-rc/core/scenario-A-after-mission-control-1.png)) |
 | Mission Control | **Verified** (601d06a): 5 originating-Space returns each in A, R1 and R5, with the recovery path on every return; SpacesHarness session mode: entry plus 18 returns, band at the 0.4 s sample on all 18 ([summary](evidence/0.1.0-rc/core/missioncontrol.summary.txt)) |
 | Restoration | **Verified** (601d06a): R1–R5, including two windows restored into two Spaces and a restore while another app is frontmost |
-| Limitations | Not re-run on the RC (unchanged SDK code). Physical external display, display sleep/wake and macOS 15 are not covered |
+| Release-code acceptance | Public-release checkout: `run-scenarios.sh` A, B, R1–R5 **77/77 PASS**, including expected Mission Control recovery; owner M1 **8/8** and M2 **3/3** PASS ([TESTING.md](TESTING.md)). Current-run screenshots retained locally, not independently visually reviewed. |
+| Limitations | Older frame-override RC results above are historical; current release scenarios were rerun as recorded separately. Physical external displays and macOS 15 are not verified. |
 
 ## Electron — `Integrations/Electron`
 

@@ -6,7 +6,7 @@ claimed for configurations that were not run.
 
 > **References.** Commit hashes in this document identify revisions in
 > FullPanelKit's private development history, which is not published
-> ([PROVENANCE.md](PROVENANCE.md#public-history)). "Release candidate" means
+> ([PROVENANCE.md](PROVENANCE.md#scope-of-this-release)). "Release candidate" means
 > the earlier, unpublished 0.1.0 candidate, which used the previous
 > fullscreen-frame geometry mechanism.
 
@@ -51,7 +51,7 @@ before it is accepted).
 | Display without a housing (external, Sidecar) at entry | Ordinary fullscreen, `.fallback` / `.noCameraHousing` | Verified with Sidecar (2026-10-11, 10-16) |
 | FullPanel Space dragged to a display without a housing in Mission Control, and back | Ordinary fullscreen there; FullPanel again on return | Verified with **Sidecar** only (2026-10-16) |
 | Physical external display: migration, as main display, unplug/replug while in FullPanel | Designed to release/resume as above | **Not verified** (no wired display available) |
-| Display sleep and wake, lock screen | FullPanel again after unlock or wake | One attended run each with the menu-bar reservation mechanism (5 checks each, macOS 27.0.1); release check still open: [MANUAL_ACCEPTANCE.md](MANUAL_ACCEPTANCE.md), M2 |
+| Display sleep and wake, lock screen | FullPanel again after unlock or wake | **Verified on release code**: owner-performed manual M2 3/3 PASS, 2026-10-20 ([TESTING.md](TESTING.md)); earlier attended runs also passed |
 | Split View on the notched display | Ordinary tile, `.fallback` / `.frameNotAccepted` | Decision unit-tested; one hardware run with the menu-bar reservation mechanism (macOS 27.0.1): the tile matched native Split View, and FullPanel worked again on the next entry |
 | "Always show menu bar in full screen" on | Ordinary fullscreen, `.menuBarAlwaysShown` | Decision unit-tested; not re-run on hardware for 0.1.0 |
 | "Displays have separate Spaces" off | — | Untested |
@@ -83,9 +83,9 @@ avoidance are in [WINDOW_LIFECYCLE.md](WINDOW_LIFECYCLE.md).
 
 | | Status |
 | --- | --- |
-| Escape (originating Space), large preview, small thumbnail, large preview then small thumbnail, from another Space via the thumbnail, Control-arrow Space switches | Release candidate (frame-override mechanism): verified, 3 cycles each for session and fpwindow, band rendered at the 0.4 s sample on all 36 returns in the final run (35 of 36 in an earlier run, all by 1.2 s). Menu-bar reservation mechanism, `FullPanelWindow`: bounded runs of 10 returns per configuration (small thumbnail in the Space, thumbnail from another Space, large preview), every return completed with native-fullscreen latencies; the full suite has not been re-run |
-| Repeated returns | Verified (5–10 per run in A, R1, R5) |
-| Trackpad swipe gestures | Not automated (equivalent keyboard Space switch verified); manual check in MANUAL_ACCEPTANCE.md, M1 |
+| Escape (originating Space), large preview, small thumbnail, large preview then small thumbnail, from another Space via the thumbnail, Control-arrow Space switches | Release candidate (frame-override mechanism): verified, 3 cycles each for session and fpwindow, band rendered at the 0.4 s sample on all 36 returns in the final run (35 of 36 in an earlier run, all by 1.2 s). Menu-bar reservation mechanism, `FullPanelWindow`: bounded runs of 10 returns per configuration (small thumbnail in the Space, thumbnail from another Space, large preview), every return completed with native-fullscreen latencies; that earlier six-path comparison suite was not repeated with the reservation mechanism; separate release-code restoration scenarios A, B and R1–R5 passed 77/77 |
+| Repeated returns | **Release code verified:** 5 expected Mission Control returns each in A, R1 and R5; restoration suite 77/77 PASS ([TESTING.md](TESTING.md)) |
+| Trackpad swipe gestures | **Manually verified** in owner-performed M1 8/8 PASS on release code, 2026-10-20 ([TESTING.md](TESTING.md)); not automated |
 | Dock click / Command-Tab with "switch to a Space with open windows" on | Same as native fullscreen: switches (verified) |
 | Same with the setting off | Same as native fullscreen: activates the menu bar only (verified 2026-10-16) |
 | Menu-bar hover reveal at the top edge | Verified on the release candidate with synthetic pointer moves: no reveal inside the strip, reveal at the top edge, strip restored after moving away (screen captures) |

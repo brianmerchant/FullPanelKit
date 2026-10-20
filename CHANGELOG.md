@@ -4,9 +4,9 @@ All notable changes to FullPanelKit. Versions follow [Semantic Versioning](https
 while the major version is 0, a minor release may change public API (see
 [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md), "Versioning").
 
-## 0.1.0 — Developer Preview (unreleased)
+## 0.1.0 — Developer Preview (2026-10-20)
 
-First public release. Not yet tagged or published.
+First public release.
 
 Native macOS fullscreen whose window covers the whole MacBook display,
 including the areas beside the camera housing, while remaining a genuine
@@ -99,16 +99,6 @@ integration's evidence and [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for
 what is not verified: physical external displays, other Macs, other macOS
 releases (for macOS 15.8.1 the reservation method was inspected statically
 only), and, for the bridges, Mission Control with the current geometry.
-Checks that need a person: [docs/MANUAL_ACCEPTANCE.md](docs/MANUAL_ACCEPTANCE.md).
-
-### Pre-release history
-
-Never released: local milestones "0.1.0 — Experimental" (first extraction
-from a hardware-test probe) and "0.2.0 — Experimental" (`FullPanelSession`,
-shared engine), and an unpublished 0.1.0 candidate that used an earlier
-geometry mechanism (a private `_frameForFullScreenMode` override with frame
-guards) and contained portions adapted from UTM under Apache-2.0. Those
-portions were removed or replaced in a redesign before this version, and the
-frame override was then replaced by the menu-bar reservation. See
-[docs/PROVENANCE.md](docs/PROVENANCE.md) and
-[docs/HARDWARE_BASELINE.md](docs/HARDWARE_BASELINE.md).
+Owner acceptance on the release checkout: M1 8/8, M2 3/3; restoration
+scenarios A, B and R1–R5 passed 77/77. See [docs/TESTING.md](docs/TESTING.md).
+Checks for other hardware remain documented in [docs/MANUAL_ACCEPTANCE.md](docs/MANUAL_ACCEPTANCE.md).

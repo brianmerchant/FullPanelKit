@@ -1,6 +1,6 @@
 # FullPanelKit
 
-**Developer Preview (0.1.0, unreleased).** A Swift package that lets your
+**Developer Preview (0.1.0).** A Swift package that lets your
 app's own native fullscreen windows use the whole MacBook display —
 including the areas left and right of the camera housing ("notch") — while
 staying real macOS fullscreen Spaces.
@@ -56,7 +56,8 @@ Many apps reach the pixels beside the notch with an "old-style" borderless
 window sized to the screen. That window stays on the desktop Space: there is
 no fullscreen Space in Mission Control, no swipe between Spaces, and the green
 button does not apply. FullPanelKit keeps the native fullscreen Space and
-changes only its frame and menu bar. Other approaches and prior work (UTM,
+lets AppKit lay the window out across the display while coordinating
+the menu bar. Other approaches and prior work (UTM,
 WezTerm, MacNotchKiller, …): [docs/PRIOR_ART.md](docs/PRIOR_ART.md).
 
 ## Requirements
@@ -74,13 +75,12 @@ WezTerm, MacNotchKiller, …): [docs/PRIOR_ART.md](docs/PRIOR_ART.md).
 
 ## Installation
 
-Swift Package Manager. Until the first tag exists, use a local path:
+Swift Package Manager (available from the `v0.1.0` release tag):
 
 ```swift
 // Package.swift
 dependencies: [
-    .package(path: "../FullPanelKit"),
-    // after release: .package(url: "<repository URL>", from: "0.1.0"),
+    .package(url: "https://github.com/brianmerchant/FullPanelKit.git", from: "0.1.0"),
 ],
 targets: [
     .target(name: "MyApp", dependencies: [
@@ -89,8 +89,10 @@ targets: [
 ]
 ```
 
-In Xcode: File ▸ Add Package Dependencies… ▸ Add Local…, then add the
-`FullPanelKit` library to your app target.
+For local development instead, use `.package(path: "../FullPanelKit")`.
+
+In Xcode: File ▸ Add Package Dependencies… and enter the repository URL;
+then add the `FullPanelKit` library to your app target.
 
 ## AppKit quick start
 
@@ -244,9 +246,10 @@ application, switch to a Space with open windows for the application".
 ## Known limitations
 
 - Private API: may break with a macOS update; not for the Mac App Store.
-- Verified on one Mac and one macOS release; physical external displays,
-  display sleep/wake and other Macs are not verified
-  ([docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)).
+- Verified on one Mac and one macOS release; physical external displays
+  and other Macs are not verified. Lock/unlock and display sleep/wake passed
+  manual acceptance M2 on this release (3/3). See
+  [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
 - Already-fullscreen windows are not adopted in place.
 - If WindowServer takes the strip away from a fullscreen session, it stays
   away until the next entry; FullPanelKit never forces a frame.
@@ -263,8 +266,8 @@ revision, check lists, real screen captures, gaps):
 
 | Integration | Example | Status |
 | --- | --- | --- |
-| AppKit, `FullPanelWindow` | `Examples/FullPanelDemo`, `Tools/SpacesHarness` | **Hardware verified.** This release: 100 Mission Control returns; Dock, Command-Tab and Space switches. Earlier build: strip rendering, clicks and menu-bar reveal in the demo, display-mode changes |
-| SwiftUI `WindowGroup`, `FullPanelSession` | `Examples/FullPanelAttachDemo` | **Hardware verified.** This release: autotest 82/82, lifecycle 28/28 (also under Zombies). Earlier build: 77 scenario checks including windows restored into fullscreen and Mission Control returns |
+| AppKit, `FullPanelWindow` | `Examples/FullPanelDemo`, `Tools/SpacesHarness` | **Hardware verified.** This release: 100 Mission Control returns; Dock, Command-Tab and Space switches; manual M1 8/8 including physical clicks and menu-bar reveal. Earlier build: display-mode changes |
+| SwiftUI `WindowGroup`, `FullPanelSession` | `Examples/FullPanelAttachDemo` | **Hardware verified.** This release: autotest 82/82, lifecycle 28/28 (also under Zombies), restoration scenarios 77/77 including Mission Control returns |
 | Your own `NSWindow` subclass, `FullPanelSession` | `Examples/FullPanelAttachDemo` (AppKit mode), `Tools/SpacesHarness` | **Hardware verified.** This release: autotest 49/49; Mission Control, Dock and Command-Tab via `Tools/SpacesHarness` |
 | Electron 44.7.0 | `Integrations/Electron` | **Experimental.** This release: 63/63 automated checks. Earlier build: real strip capture. Mission Control not verified with the bridge |
 | Tauri 2.12.3 | `Integrations/Tauri` | **Experimental.** This release: 101/101 automated checks. Earlier build: real strip capture. Mission Control not verified with the bridge |
