@@ -71,13 +71,13 @@ macOS 27.0.1 (26A434), MacBook Pro 14-inch (M1 Pro), built-in display only
 - [x] Mission Control: 100 thumbnail returns (`mccampaign.sh`), 100 PASS.
 - [x] Dock, Command-Tab, Space keys, large-preview return, SwiftUI smoke:
       passed on SDK code identical to this release (TESTING.md).
-- [x] Display-mode round trip, Split View fallback, lock and sleep: passed
+- [x] Display-mode round trip and Split View fallback: passed
       with the reservation mechanism on an earlier revision; not repeated on
       the release code (documented).
-- [ ] `run-scenarios.sh` (scenarios A, B, R1–R5, with Mission Control
+- [x] `run-scenarios.sh` (scenarios A, B, R1–R5, with Mission Control
       returns; includes restoration into fullscreen) on the release code.
       Run from Terminal.app.
-- [ ] Manual: [MANUAL_ACCEPTANCE.md](MANUAL_ACCEPTANCE.md) M1 (gestures,
+- [x] Manual: [MANUAL_ACCEPTANCE.md](MANUAL_ACCEPTANCE.md) M1 (gestures,
       trackpad clicks, exit) and M2 (lock, display sleep); M3–M5 where
       applicable.
 

@@ -288,3 +288,24 @@ desktop.
 - Sanitizers: `swift test --sanitize=address`; for the demo,
   `NSZombieEnabled=YES MallocScribble=1 MallocGuardEdges=1` and
   `MallocStackLogging=1 leaks --atExit -- <binary> …`.
+
+
+### Final owner acceptance — 2026-10-19
+
+Owner-reported results for FullPanelKit 0.1.0 on a MacBook Pro 14-inch
+(M1 Pro), macOS 27.0.1, using the public-release checkout:
+
+- **M1 — Everyday use:** 8/8 PASS, personally performed. Includes physical
+  clicks beside the camera housing, top-edge menu-bar reveal, Mission Control
+  returns, Space swipes, clicks after returns, and fullscreen exit.
+- **M2 — Lock and display sleep:** 3/3 PASS, personally performed. Includes
+  lock/unlock, display sleep/wake, and fullscreen exit/desktop restoration.
+- **Restoration scenarios:** 77/77 PASS, 0 FAIL, from `run-scenarios.sh` on
+  the public-release checkout: A (11), B (10), R1 (13), R2 (12), R3 (8),
+  R4 (8), R5 (15). Expected five rearm events reported for A, R1, R5.
+- **Evidence:** Harness output and screenshots retained locally at
+  `~/Downloads/FullPanelKit-0.1.0-final-scenarios/`; screenshots were not
+  independently reviewed for this acceptance record.
+
+These results supplement the existing automated test evidence and do not
+establish support for untested macOS versions, hardware, or external displays.

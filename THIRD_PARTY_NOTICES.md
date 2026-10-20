@@ -68,20 +68,18 @@ fullscreen Space type) were cross-checked against public reverse-engineered
 headers (CGSInternal; [yabai](https://github.com/asmvik/yabai), MIT). No code
 from either was copied.
 
-## 4. History and acknowledgments (no code included)
+## 4. Prior work and acknowledgments (no code included)
 
-These projects are credited for their part in FullPanelKit's history. None
-of their code is in this distribution. The full record is
-[docs/PROVENANCE.md](docs/PROVENANCE.md).
+The following projects influenced FullPanelKit's development or served as references. The October 19, 2026 source audit did not identify code from them in this 0.1.0 source distribution. Acknowledgment is not an assertion of endorsement or a redistribution license obligation.
 
-| Project | License | Relation to FullPanelKit |
-| --- | --- | --- |
-| [UTM](https://github.com/utmapp/UTM) (Turing Software, LLC, and contributors) | Apache-2.0 | **Important prior work.** UTM's native fullscreen beside the camera housing ([PR #7885](https://github.com/utmapp/UTM/pull/7885), [PR #7910](https://github.com/utmapp/UTM/pull/7910), `Platform/macOS/Display/VMDisplayWindow.swift`) showed that a native fullscreen window can use the area beside the housing. FullPanel's first implementation was built on an Objective-C port of that file, and earlier, unpublished versions of FullPanelKit contained portions adapted from it under Apache-2.0 with UTM's notice. Those portions were removed or replaced in a later redesign, which was not a clean-room implementation (its authors had read the adapted code). This release does not contain them. |
-| [OmacVM](https://github.com/gillesgoetsch/OmacVM) (Gilles Goetsch) | MIT | **Where FullPanel was developed.** Brian Merchant first built FullPanel, and did much of its early hardware testing, as a native fullscreen mode for OmacVM's QEMU display, on a branch of his OmacVM fork. He proposed it upstream in [issue #339](https://github.com/gillesgoetsch/OmacVM/issues/339), and Gilles Goetsch integrated his own FullPanel implementation, based on that branch, into OmacVM. FullPanelKit is a separate package; it contains no OmacVM code by other authors and is not maintained or endorsed by the OmacVM project. |
-| [Try Omarchy](https://github.com/omacom/try-omarchy) | MIT | **Architectural inspiration.** [Pull request #361, "Full macOS notch support"](https://github.com/omacom/try-omarchy/pull/361) by [themartiano](https://github.com/themartiano) showed that answering AppKit's fullscreen menu-bar reservation question (`-reservesSpaceForMenuBarInFullScreen`) with NO makes AppKit lay a fullscreen window out over the whole display. FullPanelKit's reservation hook was written independently from that selector, its type signature and observed behaviour; no code from the pull request was copied. |
-| [yabai](https://github.com/asmvik/yabai) (Åsmund Vikane), CGSInternal | MIT | Cross-reference for SkyLight function signatures and constants (facts, not code). |
+| Project | Relationship to FullPanelKit 0.1.0 |
+| --- | --- |
+| [UTM](https://github.com/utmapp/UTM) (Turing Software, LLC and contributors), [PR #7885](https://github.com/utmapp/UTM/pull/7885), [PR #7910](https://github.com/utmapp/UTM/pull/7910) | Prior work demonstrating native fullscreen presentation in the display area beside the camera housing. No UTM code is included in this release. |
+| [OmacVM](https://github.com/gillesgoetsch/OmacVM) (Gilles Goetsch) | Application context for early FullPanel development and hardware testing; FullPanelKit is separately maintained and contains no OmacVM code from other contributors. |
+| [Try Omarchy](https://github.com/omacom/try-omarchy), [PR #361](https://github.com/omacom/try-omarchy/pull/361) by [themartiano](https://github.com/themartiano) | Architectural inspiration for AppKit-controlled fullscreen layout through the menu-bar reservation behavior. No code copied from the pull request. |
+| [yabai](https://github.com/asmvik/yabai) and CGSInternal | Reference material for SkyLight function signatures and constants, not copied implementation code. |
+
+For the scope of the first public release, attribution, and development methodology, see [docs/PROVENANCE.md](docs/PROVENANCE.md).
 
 Apple, AppKit, macOS and Mission Control are trademarks of Apple Inc.
-FullPanelKit is not affiliated with or endorsed by Apple Inc., Turing
-Software, LLC (UTM), the OmacVM project, the Try Omarchy project, or any
-project named above.
+FullPanelKit is not affiliated with or endorsed by Apple Inc., Turing Software, LLC (UTM), the OmacVM project, the Try Omarchy project, or any project named above.

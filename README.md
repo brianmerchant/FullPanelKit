@@ -323,33 +323,12 @@ including what AI assistance does and does not establish:
 
 ## History and acknowledgments
 
-FullPanel began as Brian Merchant's native fullscreen mode for
-[OmacVM](https://github.com/gillesgoetsch/OmacVM)'s QEMU display, where much
-of its early hardware testing took place, and was proposed upstream in
-[OmacVM issue #339](https://github.com/gillesgoetsch/OmacVM/issues/339)
-before being extracted into this separate package. Thanks to Gilles Goetsch
-and OmacVM for that collaboration.
 
-The first implementation was built on an Objective-C port of
-[UTM](https://github.com/utmapp/UTM)'s camera-housing fullscreen
-([PR #7885](https://github.com/utmapp/UTM/pull/7885),
-[PR #7910](https://github.com/utmapp/UTM/pull/7910); Turing Software, LLC,
-Apache-2.0). UTM and its contributors showed that a native fullscreen Space
-can use the area beside the housing. Earlier, unpublished versions of
-FullPanelKit contained portions adapted from UTM; they were removed or
-replaced in a later redesign, which is not a clean-room implementation (its
-authors had read the adapted code).
+FullPanelKit **0.1.0 is the SDK's first public release**. Its implementation and integration APIs are maintained separately from the projects acknowledged here. This release contains no UTM, Try Omarchy, or OmacVM source code according to the release-source audit.
 
-The current geometry, in which AppKit itself lays the window out over the
-whole display once its menu-bar reservation question is answered, was
-informed by [Try Omarchy pull request #361](https://github.com/omacom/try-omarchy/pull/361)
-("Full macOS notch support", by themartiano). FullPanelKit's implementation
-was written independently from the AppKit selector, its signature and
-observed behaviour; no code was copied.
+[UTM](https://github.com/utmapp/UTM) is important prior work on native fullscreen around the MacBook camera housing. [Try Omarchy PR #361](https://github.com/omacom/try-omarchy/pull/361), by [themartiano](https://github.com/themartiano), inspired the AppKit fullscreen menu-bar reservation approach. [OmacVM](https://github.com/gillesgoetsch/OmacVM), maintained by Gilles Goetsch, was the original application context for FullPanel development. [yabai](https://github.com/asmvik/yabai) and CGSInternal were references for platform interfaces.
 
-None of these projects maintains or endorses FullPanelKit. The full record,
-including why this repository starts from a fresh history:
-[docs/PROVENANCE.md](docs/PROVENANCE.md).
+See [Provenance and acknowledgments](docs/PROVENANCE.md) and [Third-party notices](THIRD_PARTY_NOTICES.md) for the release's scope and license obligations.
 
 ## License
 
