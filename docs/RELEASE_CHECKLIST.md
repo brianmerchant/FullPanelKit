@@ -9,6 +9,17 @@ steps are listed last and are performed by the maintainer.
 scenarios (77/77), and owner manual M1/M2 (11/11) passed. Unsupported or
 unavailable hardware remains documented. Publication is handled in §§6–7.
 
+**0.1.1 patch (2026-10-20), maintainer-approved.** Reveal-sensing fix only,
+no API change. On the release code: §3 automated tests all passed (107
+executed, 4 skipped, 0 failures; ASan; consumer check); §4 autotests 82/82
+and 49/49, lifecycle 28/28 plain and under Zombies, `run-scenarios.sh` 77/77,
+smoke (AppKit, accessory, SwiftUI) and Mission Control / Space returns with
+and without a titlebar accessory passed; owner physical-pointer reveal
+passed. Not re-run: the 100-return campaign, display-mode round trip, Split
+View, bridges (unchanged sources apart from the shared core's reveal
+sensing). Results: [TESTING.md](TESTING.md) "0.1.1". Tag `v0.1.1`;
+GitHub release from the CHANGELOG entry, marked pre-release like 0.1.0.
+
 ## 1. Source state
 
 - [x] Release tree is the audited export: a fresh root commit, no imported
