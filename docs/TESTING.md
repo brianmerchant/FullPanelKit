@@ -46,7 +46,7 @@ as passed.
 
 ```sh
 Tools/ConsumerCheck/check.sh            # HEAD
-Tools/ConsumerCheck/check.sh 0.1.0      # a tag, later
+Tools/ConsumerCheck/check.sh v0.1.1     # a release tag
 ```
 
 Clones the committed ref into a temporary directory (no working-tree files,
@@ -111,6 +111,35 @@ opaque menu bar counts as not rendered. Mission Control's closing animation
 can still be on screen at 0.4 s; 1.2 s and 3 s are the settled samples.
 
 ## Results
+
+### 0.1.1, 2026-10-20
+
+Release code (`Prepare FullPanelKit 0.1.1`; core sources as in the fix
+commit). MacBook Pro 14-inch (M1 Pro), built-in display, macOS 27.0.1. The
+fix concerns menu-bar reveal sensing for windows whose fullscreen titlebar
+window AppKit keeps opaque (CHANGELOG 0.1.1).
+
+| Check | Result |
+| --- | --- |
+| `swift build`, `--build-tests`, `-warnings-as-errors -Werror` | clean |
+| `swift test` / `--sanitize=address` | 107 executed, 4 skipped (no display without a housing), 0 failures / same, no reports |
+| `Tools/ConsumerCheck/check.sh HEAD` | PASS (public API; decision SPI not visible) |
+| Examples and `Tools/SpacesHarness` | build |
+| `smoke-fullpaneldemo.sh` `appkit`, `accessory`, `swiftui` | all three: band filled after entry, menu bar revealed at the top edge, band filled again after moving away |
+| FullPanelDemo, plain and `-FullPanelDemoTitlebarAccessory YES`: entry, 3 × (Mission Control + Escape, Control-Left/Right) | band filled after all 6 returns in both; the accessory window takes the new path (trace `source=titlebar-pinned`) |
+| Attachment autotest / AppKit subclass | 82/82 / 49/49 |
+| Lifecycle scenario, plain / `NSZombieEnabled=YES MallocScribble=1` | 28/28 / 28/28 |
+| `run-scenarios.sh <outdir> 5` (Terminal.app): A, B, R1–R5 | 77/77; recovery path on every Mission Control return |
+| Owner, physical pointer, an application whose windows have a titlebar accessory view controller | menu bar revealed and hidden at the top edge, also after a Mission Control return; band restored; menu used; click beside the housing |
+
+Before the fix, the same accessory configuration (v0.1.0 core) left the band
+black after a top-edge reveal, Mission Control and a Space switch until
+fullscreen was left; without the accessory it was correct. Not re-run for
+0.1.1 (the change is limited to reveal sensing): the 100-return
+`mccampaign.sh`, display-mode round trip, Split View, the bridges' suites.
+The lifecycle scenario must be launched from the terminal (as above): opened
+with `open`, a newly signed build has no Screen Recording permission for its
+own band captures (`capture failed`).
 
 ### MIT release candidate (current mechanism), 2026-10-19
 

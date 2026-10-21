@@ -85,6 +85,62 @@ final class StateTransitionTests: XCTestCase {
         XCTAssertFalse(FPKRevealRequestAfterMove(true, .content, false))
     }
 
+    // A titlebar window AppKit fades (ordinary windows): a reveal starts with
+    // the intent and ends with the fade-out, as before.
+    func testRevealVisibleWithAFadingTitlebar() {
+        // Hidden: faded out, whatever the intent says.
+        XCTAssertFalse(FPKRevealVisibleNow(true, true, false, false, true, true))
+        // Fading in while AppKit intends the menu bar: on screen.
+        XCTAssertTrue(FPKRevealVisibleNow(true, true, true, false, true, true))
+        // Opaque without the intent ("Always show toolbar in full screen"): no reveal starts.
+        XCTAssertFalse(FPKRevealVisibleNow(true, true, true, false, false, true))
+        // The intent ends first; the reveal lasts until the fade-out.
+        XCTAssertTrue(FPKRevealVisibleNow(true, true, true, true, false, true))
+        XCTAssertFalse(FPKRevealVisibleNow(true, true, false, true, false, true))
+    }
+
+    // Without a titlebar window the intent alone decides (unchanged fallback).
+    func testRevealVisibleWithoutATitlebar() {
+        XCTAssertTrue(FPKRevealVisibleNow(false, false, false, false, true, true))
+        XCTAssertTrue(FPKRevealVisibleNow(false, false, false, true, true, false))
+        XCTAssertFalse(FPKRevealVisibleNow(false, false, false, true, false, true))
+    }
+
+    // Measured on macOS 27.0.1 (FullPanelDemo with a hidden titlebar accessory
+    // view controller): AppKit pins the titlebar window's alpha at 1 for the
+    // whole entry. Mission Control and
+    // Space switches make the intent true while the Space is away; a top-edge
+    // reveal makes it true on the Space. Each must end when the intent does.
+    func testRevealVisibleWithAPinnedTitlebarFollowsTheIntent() {
+        var visible = false
+        func read(menuBarVisible: Bool, onSpace: Bool) -> Bool {
+            visible = FPKRevealVisibleNow(true, false, true, visible, menuBarVisible, onSpace)
+            return visible
+        }
+        // Entered, menu bar hidden.
+        XCTAssertFalse(read(menuBarVisible: false, onSpace: true))
+        // Mission Control open (or Control-arrow away): the Space is not shown.
+        XCTAssertFalse(read(menuBarVisible: true, onSpace: false))
+        // Back on the Space: the intent is false again.
+        XCTAssertFalse(read(menuBarVisible: false, onSpace: true))
+        // Top-edge reveal: AppKit sets the (unchanged) alpha on every animation step.
+        XCTAssertTrue(read(menuBarVisible: true, onSpace: true))
+        XCTAssertTrue(read(menuBarVisible: true, onSpace: true))
+        // Pointer back in the content: the hide animation's first step ends it.
+        XCTAssertFalse(read(menuBarVisible: false, onSpace: true))
+        // A reveal on screen when the Space is left ends too.
+        XCTAssertTrue(read(menuBarVisible: true, onSpace: true))
+        XCTAssertFalse(read(menuBarVisible: true, onSpace: false))
+    }
+
+    // The v0.1.0 rule applied to a pinned titlebar window latched: once the
+    // intent had been true, an opaque titlebar window kept the reveal forever
+    // (black band after every Mission Control or Space return).
+    func testPinnedTitlebarDoesNotLatchTheReveal() {
+        let afterMissionControl = FPKRevealVisibleNow(true, false, true, true, false, true)
+        XCTAssertFalse(afterMissionControl)
+    }
+
     private func facts(tracking: Bool = true, key: Bool = true, onSpace: Bool = true,
                        supported: Bool = true, requested: Bool = false, visible: Bool = false,
                        releasing: Bool = false, forcing: Bool = false) -> FPKFacts {

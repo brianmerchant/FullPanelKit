@@ -52,7 +52,9 @@ beside the camera black.
   `~/Downloads/FullPanelDemo-report.json` (engine diagnostics and click counts).
 - `-FullPanelTrace YES` logs a timestamped engine trace (Console.app, process
   "FullPanelDemo"). `-FullPanelDemoLabel A` tints the window and labels it,
-  for tests with several instances.
+  for tests with several instances. `-FullPanelDemoTitlebarAccessory YES`
+  gives the window a hidden titlebar accessory view controller, the
+  configuration in which AppKit keeps the fullscreen titlebar window opaque.
 
 A screenshot shows what the app draws, including the strips. It cannot show
 the physical camera housing, which hides the middle of the band.

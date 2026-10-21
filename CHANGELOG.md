@@ -4,6 +4,25 @@ All notable changes to FullPanelKit. Versions follow [Semantic Versioning](https
 while the major version is 0, a minor release may change public API (see
 [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md), "Versioning").
 
+## 0.1.1 — Developer Preview (2026-10-20)
+
+Patch release: one behavior fix, no API change.
+
+### Fixed
+
+- Menu-bar reveal sensing for windows whose fullscreen titlebar window AppKit
+  keeps opaque. With FullPanel, a window with a titlebar accessory view
+  controller or a toolbar gets a titlebar window that AppKit never fades out
+  (alpha pinned at 1; measured on macOS 27.0.1). The first time the menu bar
+  was intended to be shown (Mission Control, a Space switch, a top-edge
+  reveal), the reveal state latched: the band beside the housing stayed black
+  and the presentation options stayed relaxed until fullscreen was left. The
+  reveal now follows `+[NSMenu menuBarVisible]`, while the window's Space is
+  active, until the titlebar window has been seen faded out; windows whose
+  titlebar window fades behave as before. No public API change.
+- FullPanelDemo: `-FullPanelDemoTitlebarAccessory YES` reproduces that
+  configuration; `smoke-fullpaneldemo.sh <outdir> accessory` runs it.
+
 ## 0.1.0 — Developer Preview (2026-10-20)
 
 First public release.

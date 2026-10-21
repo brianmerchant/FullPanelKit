@@ -78,6 +78,24 @@ FPKPointerZone FPKPointerZoneAt(CGFloat pointerY, CGFloat displayMaxY, CGFloat b
 /// the pointer is in the band or a reveal is on screen, cleared in the content.
 bool FPKRevealRequestAfterMove(bool requested, FPKPointerZone zone, bool revealVisible);
 
+/// Whether a menu-bar reveal is on screen, re-read whenever AppKit sets the
+/// fullscreen titlebar window's alpha (every reveal animation step) or the
+/// window's state changes. `menuBarVisible` is `+[NSMenu menuBarVisible]`,
+/// AppKit's intent; `wasVisible` the previous answer.
+///
+/// - No titlebar window (`hasTitlebar` false): the intent alone.
+/// - A titlebar window that has been seen faded out (`titlebarFades`): AppKit
+///   fades it in with a reveal and out after it, so a reveal starts with the
+///   intent and ends with the fade-out (`shown` false).
+/// - A titlebar window never seen faded: AppKit pins its alpha at 1 when the
+///   window does not reserve the menu bar (FullPanel) and the titlebar window
+///   is taller than the autohide height (a titlebar accessory view controller
+///   or a toolbar; measured on macOS 27.0.1), or with "Always show toolbar in
+///   full screen". Its alpha says nothing about reveals: the intent, while the
+///   window's Space is the active one, decides.
+bool FPKRevealVisibleNow(bool hasTitlebar, bool titlebarFades, bool shown, bool wasVisible,
+                         bool menuBarVisible, bool onActiveSpace);
+
 // ---- Desired system state ---------------------------------------------------
 
 /// What the engine does with the application-wide presentation options.

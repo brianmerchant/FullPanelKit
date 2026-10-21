@@ -31,6 +31,15 @@ final class DemoApp: NSObject, NSApplicationDelegate, NSWindowDelegate, NSMenuIt
         window.title = "FullPanel Demo" + (useSwiftUI ? " (SwiftUI)" : "")
             + (UserDefaults.standard.string(forKey: "FullPanelDemoLabel").map { " \($0)" } ?? "")
         window.minSize = NSSize(width: 700, height: 560)
+        if UserDefaults.standard.bool(forKey: "FullPanelDemoTitlebarAccessory") {
+            // Test configuration: a hidden titlebar accessory, as some toolkits
+            // add to every window. It makes AppKit keep the fullscreen titlebar
+            // window opaque under FullPanel (reveal sensing must not rely on it).
+            let accessory = NSTitlebarAccessoryViewController()
+            accessory.view = NSView(frame: .zero)
+            accessory.isHidden = true
+            window.addTitlebarAccessoryViewController(accessory)
+        }
         window.delegate = self          // ordinary app delegate; FullPanel needs nothing from it
         window.fullPanelEnabled = true
         model.attach(to: window)

@@ -64,6 +64,13 @@ bool FPKRevealRequestAfterMove(bool requested, FPKPointerZone zone, bool revealV
     return requested;
 }
 
+bool FPKRevealVisibleNow(bool hasTitlebar, bool titlebarFades, bool shown, bool wasVisible,
+                         bool menuBarVisible, bool onActiveSpace) {
+    if (!hasTitlebar) return menuBarVisible;
+    if (titlebarFades) return shown && (wasVisible || menuBarVisible);
+    return menuBarVisible && onActiveSpace;
+}
+
 FPKIntent FPKIntentForFacts(FPKFacts f) {
     FPKIntent intent = { .backdropVisible = true, .presentation = FPKPresentationLeave,
                          .titlebarPassThrough = false };

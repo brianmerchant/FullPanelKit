@@ -1,6 +1,6 @@
 # FullPanelKit
 
-**Developer Preview (0.1.0).** A Swift package that lets your
+**Developer Preview (0.1.1).** A Swift package that lets your
 app's own native fullscreen windows use the whole MacBook display —
 including the areas left and right of the camera housing ("notch") — while
 staying real macOS fullscreen Spaces.
@@ -75,12 +75,12 @@ WezTerm, MacNotchKiller, …): [docs/PRIOR_ART.md](docs/PRIOR_ART.md).
 
 ## Installation
 
-Swift Package Manager (available from the `v0.1.0` release tag):
+Swift Package Manager (release tags `v0.1.0`, `v0.1.1`; use 0.1.1 or later):
 
 ```swift
 // Package.swift
 dependencies: [
-    .package(url: "https://github.com/brianmerchant/FullPanelKit.git", from: "0.1.0"),
+    .package(url: "https://github.com/brianmerchant/FullPanelKit.git", from: "0.1.1"),
 ],
 targets: [
     .target(name: "MyApp", dependencies: [
