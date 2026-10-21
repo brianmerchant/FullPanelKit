@@ -3,7 +3,7 @@
 This is the canonical guide for developers and coding agents working on the
 public, MIT-licensed FullPanelKit SDK. Use this checkout's current source and
 documentation as authority. Do not substitute unpublished implementations.
-FullPanelKit 0.1.0 is a published Developer Preview; preserve that release.
+FullPanelKit 0.1.0 and 0.1.1 are published Developer Preview releases; preserve them.
 
 Read [README.md](README.md), [ARCHITECTURE.md](docs/ARCHITECTURE.md),
 [ATTACHMENT.md](docs/ATTACHMENT.md), [COMPATIBILITY.md](docs/COMPATIBILITY.md),
@@ -203,7 +203,7 @@ geometry modes.
 - Check scope and `git status` before editing. Preserve unrelated work and
   review the final diff. Keep behavior, public documentation and evidence in
   agreement; report validation that could not be performed.
-- `v0.1.0` is already published. Do not move, replace or delete its tag, rewrite
+- `v0.1.0` and `v0.1.1` are already published. Do not move, replace or delete their tags, rewrite
   release history, or replay historical publication steps from the checklist.
   Future releases follow [RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md),
   with maintainer approval and recorded evidence before publication.

@@ -4,7 +4,9 @@ All notable changes to FullPanelKit. Versions follow [Semantic Versioning](https
 while the major version is 0, a minor release may change public API (see
 [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md), "Versioning").
 
-## Unreleased
+## 0.1.1 — Developer Preview (2026-10-20)
+
+Patch release: one behavior fix, no API change.
 
 ### Fixed
 

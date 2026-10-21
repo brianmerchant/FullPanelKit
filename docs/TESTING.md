@@ -46,7 +46,7 @@ as passed.
 
 ```sh
 Tools/ConsumerCheck/check.sh            # HEAD
-Tools/ConsumerCheck/check.sh 0.1.0      # a tag, later
+Tools/ConsumerCheck/check.sh v0.1.1     # a release tag
 ```
 
 Clones the committed ref into a temporary directory (no working-tree files,
